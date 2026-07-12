@@ -198,813 +198,465 @@
    
     const allQuestions = [
         
-{ q: "What instrument is primarily used to measure air temperature?", options: ["Thermometer", "Barometer", "Hydrometer", "Anemometer"], correct: 0, info: "Air temperature is measured using a thermometer." },
+{ q: "According to the International Standard Atmosphere (ISA), the standard atmospheric conditions are referenced to:", options: ["The Equator at sea level", "45° latitude at mean sea level", "The North Pole at sea level", "The Tropopause"], correct: 1, info: "The ISA is based on standard atmospheric conditions referenced to mean sea level at 45° latitude." },
 
-{ q: "What instrument measures atmospheric pressure?", options: ["Hygrometer", "Barometer", "Altimeter", "Thermocouple"], correct: 1, info: "Atmospheric pressure is measured using a barometer." },
+{ q: "As altitude increases, atmospheric pressure:", options: ["Decreases exponentially", "Decreases at a constant rate", "Remains constant", "Increases exponentially"], correct: 0, info: "Atmospheric pressure decreases exponentially with altitude because both air density and the mass of air above decrease." },
 
-{ q: "Which SI unit is commonly used to express air pressure?", options: ["Newton", "Pascal", "Kelvin", "Joule"], correct: 1, info: "Pressure is measured in Pascals (Pa), although hPa or millibars are commonly used in aviation." },
+{ q: "At approximately what altitude is atmospheric pressure about half of its sea-level value?", options: ["8,000 ft", "12,000 ft", "18,000 ft", "24,000 ft"], correct: 2, info: "Atmospheric pressure is approximately half of the sea-level value at 18,000 ft." },
 
-{ q: "Which gas makes up the largest proportion of Earth's atmosphere?", options: ["Oxygen", "Nitrogen", "Argon", "Carbon Dioxide"], correct: 1, info: "Nitrogen makes up approximately 78% of Earth's atmosphere." },
+{ q: "If the gauge pressure is 25 PSI at standard sea level, what is the absolute pressure?", options: ["39.7 PSI", "25.0 PSI", "14.7 PSI", "43.8 PSI"], correct: 0, info: "Absolute pressure equals gauge pressure plus atmospheric pressure: 25 + 14.7 = 39.7 PSI." },
 
-{ q: "Approximately what percentage of the atmosphere is oxygen?", options: ["21%", "30%", "15%", "10%"], correct: 0, info: "Oxygen accounts for approximately 21% of the atmosphere." },
+{ q: "As atmospheric temperature decreases, atmospheric pressure generally:", options: ["Increases proportionally", "Remains unchanged", "Decreases proportionally", "Becomes independent of temperature"], correct: 2, info: "Pressure and temperature are directly related for a given volume, so a decrease in temperature results in a decrease in pressure." },
 
-{ q: "Which atmospheric layer contains most weather phenomena?", options: ["Stratosphere", "Mesosphere", "Troposphere", "Thermosphere"], correct: 2, info: "Almost all weather occurs in the troposphere." },
+{ q: "As air becomes colder, the service ceiling of an aircraft generally:", options: ["Decreases", "Remains unchanged", "Increases", "Depends only on aircraft weight"], correct: 2, info: "Colder air is denser, increasing both lift and engine performance, allowing a higher service ceiling." },
 
-{ q: "In which atmospheric layer is the ozone layer primarily found?", options: ["Troposphere", "Stratosphere", "Mesosphere", "Exosphere"], correct: 1, info: "The ozone layer is located within the stratosphere." },
+{ q: "What is the ISA standard sea-level pressure?", options: ["1012.3 hPa", "1013.2 hPa", "1023.2 hPa", "1000.0 hPa"], correct: 1, info: "The ISA standard sea-level pressure is 1013.2 hPa (1013.25 hPa rounded)." },
 
-{ q: "What is the standard sea level temperature in the ISA?", options: ["10°C", "15°C", "20°C", "25°C"], correct: 1, info: "The ISA assumes a sea level temperature of +15°C." },
+{ q: "How does the indicated airspeed (IAS) at the stall vary with altitude?", options: ["It increases", "It decreases", "It remains practically constant", "It doubles above 10,000 ft"], correct: 2, info: "Stall IAS remains approximately constant because IAS is related to dynamic pressure rather than true airspeed." },
 
-{ q: "What is the ISA sea level pressure?", options: ["1000 hPa", "1013.2 hPa", "1025 hPa", "980 hPa"], correct: 1, info: "Standard sea level pressure is 1013.2 hPa." },
+{ q: "How does the true airspeed (TAS) at the stall change with increasing altitude?", options: ["It decreases", "It remains constant", "It increases", "It becomes equal to IAS"], correct: 2, info: "As air density decreases with altitude, a higher true airspeed is required to produce the same lift." },
 
-{ q: "What is the ISA sea level air density?", options: ["1.000 kg/m³", "1.225 kg/m³", "1.500 kg/m³", "0.950 kg/m³"], correct: 1, info: "ISA sea level density is 1.225 kg/m³." },
+{ q: "Which ISA sea-level temperature is used as the international standard?", options: ["10°C", "15°C", "20°C", "25°C"], correct: 1, info: "The ISA standard sea-level temperature is +15°C." },
 
-{ q: "At what approximate altitude does the tropopause occur?", options: ["5 km", "8 km", "11 km", "20 km"], correct: 2, info: "The ISA tropopause is located approximately 11 km above sea level." },
+{ q: "When a leading-edge flap (slat) is fully extended, what is the primary purpose of the slot that is formed?", options: ["To re-energise the boundary layer", "To increase fuel flow over the wing", "To provide space for the flap when retracted", "To reduce wing loading"], correct: 0, info: "The slot allows high-energy air from the lower surface to flow over the upper surface, re-energising the boundary layer and delaying flow separation." },
 
-{ q: "What is the standard temperature at the tropopause?", options: ["−40°C", "−50°C", "−56.5°C", "−65°C"], correct: 2, info: "The tropopause temperature is approximately −56.5°C." },
+{ q: "What is the primary purpose of wing fences on a swept wing?", options: ["To increase wing area", "To prevent spanwise airflow and improve aileron effectiveness", "To reduce aircraft weight", "To increase engine cooling airflow"], correct: 1, info: "Wing fences reduce spanwise airflow, helping to delay wingtip stall and maintain lateral control." },
 
-{ q: "How does temperature change throughout the troposphere?", options: ["It increases steadily", "It remains constant", "It decreases uniformly", "It varies randomly"], correct: 2, info: "Temperature decreases uniformly in the troposphere." },
+{ q: "A symmetrical fin aerofoil will produce a side force:", options: ["Only when the rudder is deflected", "Only during yaw", "When an effective angle of attack is created by either yaw or rudder deflection", "Only during crosswind landings"], correct: 2, info: "A side force is produced whenever the fin experiences an angle of attack, whether caused by yaw or rudder deflection." },
 
-{ q: "What is the ISA lapse rate in the troposphere?", options: ["3°C/km", "6.5°C/km", "9.8°C/km", "12°C/km"], correct: 1, info: "The standard lapse rate is 6.5°C per kilometre." },
+{ q: "An aircraft's left wing is low in flight. To correct this using the left aileron trim tab, the cockpit trim control should be:", options: ["Moved up, causing the left aileron to move down", "Moved down, causing the left aileron to move down", "Moved down, causing the left aileron to move up", "Moved up, causing the left aileron to move up"], correct: 0, info: "Moving the trim tab up causes the aileron to deflect down, increasing lift on the left wing." },
 
-{ q: "How does atmospheric pressure change with increasing altitude?", options: ["It increases", "It remains constant", "It decreases non-linearly", "It changes randomly"], correct: 2, info: "Pressure decreases with altitude but not at a constant rate." },
+{ q: "If an elevator trim tab moves downward, it is normally used to:", options: ["Counteract a tail-heavy condition", "Counteract a nose-heavy condition", "Reduce rudder forces", "Increase elevator sensitivity"], correct: 1, info: "A downward trim tab deflects the elevator upward, producing a nose-up pitching moment to relieve a nose-heavy condition." },
 
-{ q: "Approximately at what altitude has atmospheric pressure fallen to half its sea level value?", options: ["2 km", "5 km", "10 km", "15 km"], correct: 1, info: "Pressure is approximately half its sea level value at around 5 km altitude." },
+{ q: "The stall margin of an aircraft is primarily influenced by:", options: ["Engine Pressure Ratio (EPR)", "Speed bug setting", "Angle of attack and flap position", "Cabin pressure"], correct: 2, info: "Stall margin depends mainly on angle of attack and the configuration of high-lift devices such as flaps." },
 
-{ q: "How does air density change with altitude?", options: ["It increases", "It remains constant", "It decreases", "It doubles"], correct: 2, info: "Air density decreases with increasing altitude." },
+{ q: "On aircraft fitted with dedicated speed brakes rather than spoilers, these are commonly located:", options: ["On the upper wing surface", "Either side of the fuselage", "On the horizontal stabiliser", "Inside the engine nacelles"], correct: 1, info: "Some aircraft, such as the BAe 146, use fuselage-mounted speed brakes." },
 
-{ q: "At approximately what altitude is air density half its sea level value?", options: ["3 km", "6.6 km", "12 km", "18 km"], correct: 1, info: "Density falls to approximately half at around 6.6 km." },
+{ q: "If an aircraft encounters a rising gust while the trailing-edge flaps are lowered, the angle of attack will generally:", options: ["Decrease", "Remain unchanged", "Increase", "Become zero"], correct: 2, info: "A rising gust changes the relative airflow, increasing the wing's angle of attack." },
 
-{ q: "What happens to humidity as altitude increases?", options: ["It increases", "It remains constant", "It generally decreases", "It doubles"], correct: 2, info: "Humidity decreases significantly with altitude." },
+{ q: "Which device is specifically designed to dump lift after touchdown?", options: ["Leading-edge flap", "Trailing-edge flap", "Spoiler", "Wing fence"], correct: 2, info: "Spoilers destroy lift after landing, transferring more weight to the landing gear for effective braking." },
 
-{ q: "Why is cabin humidity controlled on modern aircraft?", options: ["To improve engine performance", "For passenger comfort", "To reduce drag", "To increase lift"], correct: 1, info: "Environmental control systems maintain suitable cabin humidity for passenger comfort." },
+{ q: "What is the primary purpose of a fixed slot in a wing?", options: ["To house the slat when retracted", "To increase fuel efficiency during cruise", "To accelerate airflow and re-energise the boundary layer", "To reduce parasite drag"], correct: 2, info: "A slot accelerates airflow over the upper surface, delaying boundary layer separation and increasing the maximum lift coefficient." },
 
-{ q: "What does the density ratio (σ) compare?", options: ["Current pressure to sea level pressure", "Altitude to temperature", "Density at altitude to ISA sea level density", "Weight to lift"], correct: 2, info: "Density ratio is the ratio of density at altitude to standard sea level density." },
+{ q: "What is the collective term for the fin, rudder and other side surfaces located aft of the centre of gravity that contribute to directional stability?", options: ["Empennage", "Effective keel surface", "Horizontal stabiliser", "Fuselage datum"], correct: 1, info: "The effective keel surface consists of the side area behind the centre of gravity that produces a restoring yawing moment during a sideslip." },
 
-{ q: "Which airspeed represents the aircraft's actual speed through the air?", options: ["IAS", "CAS", "EAS", "TAS"], correct: 3, info: "True Airspeed (TAS) is the aircraft's actual speed relative to the surrounding air." },
+{ q: "Why may the angle of incidence be reduced progressively towards the wingtip?", options: ["To increase adverse yaw", "To prevent all spanwise airflow", "To retain aileron effectiveness at high angles of attack", "To make the wingtip stall before the root"], correct: 2, info: "Reducing the angle of incidence towards the wingtip is called washout. It encourages the wing root to stall first, helping the ailerons remain effective." },
 
-{ q: "Equivalent Airspeed (EAS) is corrected for which error?", options: ["Wind error", "Instrument and position errors", "Temperature error", "Altitude error"], correct: 1, info: "Equivalent Airspeed is the indicated airspeed corrected for instrument and position errors." },
+{ q: "According to Bernoulli's principle, when airflow velocity increases, static pressure will:", options: ["Increase", "Decrease", "Remain unchanged", "Become equal to total pressure"], correct: 1, info: "For subsonic airflow, an increase in velocity is accompanied by a decrease in static pressure." },
 
-{ q: "What is static pressure?", options: ["Pressure produced only by moving air", "Pressure exerted equally in all directions by still or moving air", "Pressure caused by engine thrust", "Pressure measured only inside a pitot tube"], correct: 1, info: "Static pressure is the ambient pressure exerted equally in all directions by the surrounding air." },
+{ q: "What is a typical effect of low wing loading?", options: ["Higher stall speed and a longer landing run", "Lower stall speed and a shorter landing run", "Higher landing speed with improved manoeuvrability", "No effect on stall or landing speed"], correct: 1, info: "Low wing loading means less aircraft weight is supported by each unit of wing area, resulting in lower stall and landing speeds." },
 
-{ q: "Static pressure acts in which direction?", options: ["Only forwards", "Only upwards", "In all directions equally", "Only perpendicular to the wing"], correct: 2, info: "Static pressure acts equally in every direction." },
+{ q: "If the angle of attack of an aerofoil is increased slightly below the stall angle, the centre of pressure generally:", options: ["Moves towards the leading edge", "Moves towards the wingtip", "Remains fixed", "Moves towards the trailing edge"], correct: 0, info: "On a conventional cambered aerofoil, the centre of pressure generally moves forward as angle of attack increases, until the stall is reached." },
 
-{ q: "Which flight instrument relies primarily on static pressure only?", options: ["Airspeed Indicator", "Altimeter", "Turn Coordinator", "Vertical Compass"], correct: 1, info: "The altimeter operates using only static pressure." },
+{ q: "The term 'wing setting angle' normally refers to the:", options: ["Angle of attack", "Angle of dihedral", "Angle of incidence", "Angle of sweep"], correct: 2, info: "The wing setting angle is the fixed angle between the wing chord line and the aircraft longitudinal datum, known as the angle of incidence." },
 
-{ q: "What happens to static pressure as altitude increases?", options: ["It increases", "It remains constant", "It decreases", "It doubles"], correct: 2, info: "Atmospheric pressure decreases with increasing altitude." },
+{ q: "When does the angle of incidence of a conventionally fixed wing change?", options: ["When the aircraft climbs", "When the aircraft attitude changes", "When airspeed changes", "It does not normally change in flight"], correct: 3, info: "Angle of incidence is a fixed rigging angle between the chord line and the aircraft longitudinal datum." },
 
-{ q: "Dynamic pressure is created by:", options: ["Air temperature", "Aircraft motion through the air", "Humidity", "Gravity"], correct: 1, info: "Dynamic pressure exists because of the aircraft's movement through the air." },
+{ q: "As the angle of attack of a conventional cambered aerofoil decreases, the centre of pressure generally:", options: ["Moves forward", "Moves rearwards", "Moves towards the wingtip", "Remains at the centre of gravity"], correct: 1, info: "The centre of pressure generally moves rearwards as angle of attack decreases." },
 
-{ q: "Dynamic pressure depends primarily upon:", options: ["Altitude only", "Aircraft weight", "Velocity of the airflow", "Engine power"], correct: 2, info: "Dynamic pressure increases with the square of airspeed." },
+{ q: "On a conventional cambered aerofoil producing positive lift, which surface normally contributes the greater proportion of the total lift?", options: ["The lower surface", "The upper surface", "Both surfaces always contribute equally", "The trailing edge only"], correct: 1, info: "The pressure reduction over the upper surface normally contributes the greater share of the total lift, although the exact proportion varies with aerofoil shape and flight condition." },
 
-{ q: "If aircraft speed doubles, dynamic pressure becomes:", options: ["Twice as large", "Three times as large", "Four times as large", "Eight times as large"], correct: 2, info: "Dynamic pressure varies with velocity squared, so doubling speed increases it fourfold." },
+{ q: "For an aircraft of constant weight and configuration flying at a constant indicated airspeed, an increase in altitude will cause induced drag force to:", options: ["Increase substantially", "Decrease substantially", "Remain approximately unchanged", "Become equal to profile drag"], correct: 2, info: "At constant IAS, dynamic pressure remains approximately constant. The lift coefficient required to support the same weight therefore remains approximately unchanged, so induced drag force also remains approximately unchanged." },
 
-{ q: "Total pressure is equal to:", options: ["Static pressure minus dynamic pressure", "Dynamic pressure only", "Static pressure plus dynamic pressure", "Pressure multiplied by density"], correct: 2, info: "Total pressure equals static pressure plus dynamic pressure." },
+{ q: "What is the name of the thin layer of air immediately adjacent to the surface of an aerofoil that moves more slowly due to skin friction?", options: ["Camber layer", "Boundary layer", "Pressure layer", "Viscous layer"], correct: 1, info: "The boundary layer is the thin layer of airflow immediately adjacent to the aircraft surface where velocity is reduced by friction." },
 
-{ q: "Which instrument measures total pressure?", options: ["Altimeter", "Pitot tube", "Static vent", "Turn indicator"], correct: 1, info: "The pitot tube measures total pressure." },
+{ q: "Which surface finish helps reduce skin-friction drag and airflow turbulence?", options: ["Raised rivet heads", "Flush (countersunk) rivets", "Rough paint finish", "External reinforcing strips"], correct: 1, info: "Flush rivets minimise airflow disturbance and reduce skin-friction drag compared with protruding-head rivets." },
 
-{ q: "Which pressure source provides ambient atmospheric pressure?", options: ["Pitot tube", "Static port", "Fuel vent", "Cabin vent"], correct: 1, info: "The static port senses ambient atmospheric pressure." },
+{ q: "If the centre of gravity were located aft of the centre of pressure, an increase in lift would tend to:", options: ["Reduce the angle of attack", "Create a nose-up pitching moment that further increases lift", "Reduce induced drag", "Improve longitudinal stability"], correct: 1, info: "With the CG behind the centre of pressure, increased lift produces a nose-up moment, reducing longitudinal stability." },
 
-{ q: "Bernoulli's Principle states that as fluid velocity increases:", options: ["Pressure increases", "Density doubles", "Pressure decreases", "Temperature always rises"], correct: 2, info: "Bernoulli's Principle states that increased airflow velocity produces lower static pressure." },
+{ q: "Compared with the lower surface, the upper surface of a conventional cambered wing normally:", options: ["Produces less lift", "Produces approximately the same lift", "Produces the greater proportion of the total lift", "Produces no lift"], correct: 2, info: "Most of the lift on a conventional aerofoil results from the reduced pressure over the upper surface." },
 
-{ q: "Lift generated by an aerofoil is partly explained by:", options: ["Newton's Third Law only", "Bernoulli's Principle", "Archimedes' Principle", "Pascal's Law"], correct: 1, info: "Bernoulli's Principle helps explain the pressure difference responsible for lift." },
+{ q: "What effect does a forward centre of gravity generally have during landing?", options: ["Reduces the stall speed", "Increases the stall speed", "Has no effect on the stall speed", "Reduces induced drag"], correct: 1, info: "A forward CG requires greater tail download, increasing wing loading and therefore increasing stall speed." },
 
-{ q: "Where is airflow generally fastest over a wing?", options: ["Trailing edge", "Wing tip", "Upper surface", "Lower surface"], correct: 2, info: "Air accelerates over the upper surface, reducing pressure." },
+{ q: "Aft movement of the centre of gravity generally has what effect on longitudinal stability?", options: ["Increases stability", "Has no effect", "Reduces stability", "Eliminates the need for tailplane lift"], correct: 2, info: "Moving the CG aft reduces the restoring pitching moment, making the aircraft less longitudinally stable." },
 
-{ q: "The lowest pressure around a lifting wing is normally found:", options: ["Under the wing", "Above the wing", "Behind the aircraft", "Inside the fuselage"], correct: 1, info: "The greatest airflow acceleration occurs over the upper surface." },
+{ q: "Which type of drag is directly caused by the production of lift?", options: ["Profile drag", "Interference drag", "Induced drag", "Skin-friction drag"], correct: 2, info: "Induced drag is an unavoidable consequence of lift generation and wingtip vortices." },
 
-{ q: "Why does pressure decrease when airflow speeds up?", options: ["Energy is converted from pressure into kinetic energy", "Gravity decreases", "Density doubles", "The air becomes heavier"], correct: 0, info: "Bernoulli's Principle describes conservation of energy within flowing fluids." },
+{ q: "Boundary layer separation most commonly occurs when:", options: ["The airflow encounters an adverse pressure gradient", "The airspeed is very high", "The wing loading decreases", "Static pressure becomes zero"], correct: 0, info: "An adverse pressure gradient slows the boundary layer until it can no longer remain attached to the surface." },
 
-{ q: "What is meant by streamline flow?", options: ["Chaotic airflow", "Air moving in smooth parallel layers", "Air rotating behind the wing", "Airflow that is stationary"], correct: 1, info: "Streamline (laminar) flow consists of smooth, parallel airflow." },
+{ q: "Which condition is most likely to delay boundary layer separation?", options: ["A turbulent boundary layer with greater energy", "A perfectly laminar boundary layer", "A rough leading edge", "Ice contamination"], correct: 0, info: "A turbulent boundary layer has greater kinetic energy and is better able to resist an adverse pressure gradient." },
 
-{ q: "Laminar flow produces:", options: ["Low drag", "Maximum turbulence", "Shock waves", "Compressibility"], correct: 0, info: "Laminar airflow produces significantly less drag than turbulent flow." },
+{ q: "The primary reason for maintaining a smooth wing surface is to:", options: ["Increase aircraft weight", "Reduce skin-friction drag and delay airflow separation", "Increase induced drag", "Reduce the angle of incidence"], correct: 1, info: "A smooth aerodynamic surface reduces drag and helps maintain attached airflow over the wing." },
 
-{ q: "Turbulent airflow is characterised by:", options: ["Smooth layers", "Random mixing and eddies", "Zero drag", "Constant velocity"], correct: 1, info: "Turbulent airflow contains swirling eddies and increased mixing." },
+{ q: "What is the primary purpose of a slot fitted to a wing?", options: ["To increase wing loading", "To reinforce and re-energise the boundary layer", "To reduce the wing area", "To decrease lift during landing"], correct: 1, info: "A slot directs high-energy air from the lower surface over the upper surface, re-energising the boundary layer and delaying airflow separation." },
 
-{ q: "Viscosity is the:", options: ["Weight of the air", "Internal friction between air molecules", "Pressure inside the wing", "Amount of oxygen in air"], correct: 1, info: "Viscosity describes the internal friction resisting fluid movement." },
+{ q: "Angle of attack is the angle between the:", options: ["Chord line and aircraft longitudinal axis", "Chord line and relative airflow", "Wing incidence and the horizon", "Relative airflow and the vertical axis"], correct: 1, info: "Angle of attack is the angle between the aerofoil chord line and the relative airflow." },
 
-{ q: "Because of viscosity, air immediately next to the wing surface:", options: ["Moves faster than free stream air", "Stops moving relative to the surface", "Creates lift directly", "Becomes supersonic"], correct: 1, info: "The no-slip condition causes airflow at the surface to have zero relative velocity." },
+{ q: "High-lift devices are primarily used during:", options: ["Cruise flight only", "Take-off and landing", "High-speed descent", "Aerobatic manoeuvres"], correct: 1, info: "High-lift devices increase lift at low airspeeds, making them useful during take-off and landing." },
 
-{ q: "What causes the boundary layer to form?", options: ["Humidity", "Viscosity", "Temperature", "Engine thrust"], correct: 1, info: "The boundary layer forms because viscosity slows the air next to the surface." },
+{ q: "On many aircraft, spoilers are interconnected with which primary flight control?", options: ["Elevator", "Aileron", "Rudder", "Flaps"], correct: 1, info: "Spoilers are commonly linked to the ailerons to improve roll performance. These are often referred to as spoilerons." },
 
-{ q: "What is upwash?", options: ["Airflow deflected upward before reaching the wing", "Air behind the aircraft", "Air entering the engine", "Air beneath the fuselage"], correct: 0, info: "Upwash occurs ahead of the wing as approaching airflow is deflected upward." },
+{ q: "What is meant by 'aileron droop'?", options: ["Both ailerons deflect downward together to increase lift", "One aileron remains permanently lowered", "The ailerons sag when hydraulic pressure is removed", "The leading edge of each aileron is presented to the airflow"], correct: 0, info: "Aileron droop is a system where both ailerons deflect downward together, acting as auxiliary flaps while still providing roll control." },
 
-{ q: "What causes upwash?", options: ["Propeller slipstream", "Pressure field generated by the wing", "Landing gear", "Engine exhaust"], correct: 1, info: "The pressure distribution around the wing bends airflow upward before it reaches the aerofoil." },
+{ q: "Approximately what proportion of the Earth's atmosphere is oxygen?", options: ["10%", "21%", "40%", "78%"], correct: 1, info: "The Earth's atmosphere is approximately 78% nitrogen, 21% oxygen and 1% other gases." },
 
-{ q: "What is downwash?", options: ["Airflow deflected downward behind the wing", "Air beneath the fuselage", "Air entering the intake", "Air above the tail"], correct: 0, info: "Downwash is the downward deflection of airflow after passing over the wing." },
+{ q: "What is the primary purpose of an anti-balance (anti-servo) tab?", options: ["To trim the aircraft", "To reduce control forces", "To increase control feel by resisting control surface movement", "To prevent flutter"], correct: 2, info: "An anti-balance (anti-servo) tab moves in the same direction as the control surface, increasing the force required to move it and improving control feel." },
 
-{ q: "Downwash is a direct consequence of:", options: ["Lift production", "Engine thrust", "Gyroscopic forces", "Fuel flow"], correct: 0, info: "The production of lift requires air to be deflected downward." },
+{ q: "The fin primarily provides:", options: ["Longitudinal stability about the lateral axis", "Directional stability about the normal (yaw) axis", "Lateral stability about the longitudinal axis", "Pitch control during landing"], correct: 1, info: "The fin provides directional (yaw) stability by resisting unwanted yawing motions." },
 
-{ q: "Which law is demonstrated by downwash?", options: ["Newton's Third Law", "Boyle's Law", "Hooke's Law", "Pascal's Law"], correct: 0, info: "The wing pushes air downward and receives an equal upward reaction force." },
+{ q: "Which axis is associated with yaw motion?", options: ["Longitudinal axis", "Lateral axis", "Normal (vertical) axis", "Thrust axis"], correct: 2, info: "Yaw is rotation about the aircraft's normal (vertical) axis and is controlled by the rudder." },
 
-{ q: "Which type of airflow produces the least drag?", options: ["Separated flow", "Turbulent flow", "Laminar flow", "Rotational flow"], correct: 2, info: "Laminar flow creates the lowest skin friction drag." },
+{ q: "What is the primary function of the rudder?", options: ["Control pitch", "Control roll", "Control yaw about the normal axis", "Increase lift during take-off"], correct: 2, info: "The rudder controls yaw by producing a side force on the vertical tail." },
 
-{ q: "Why is turbulent airflow sometimes desirable?", options: ["It completely removes drag", "It delays boundary layer separation", "It eliminates lift", "It reduces aircraft weight"], correct: 1, info: "A turbulent boundary layer contains more energy and resists separation longer." },
+{ q: "If the weight of an aircraft is increased while maintaining the same airspeed, induced drag will:", options: ["Increase", "Decrease", "Remain unchanged", "Reduce to zero"], correct: 0, info: "At a given airspeed, a heavier aircraft must fly at a higher angle of attack to generate more lift. This increases induced drag." },
 
-{ q: "The pressure difference between the upper and lower wing surfaces is responsible for:", options: ["Weight", "Lift", "Drag", "Thrust"], correct: 1, info: "Lift results from the pressure differential across the aerofoil." },
+{ q: "When the flaps are lowered, the resultant lift vector generally:", options: ["Moves forward", "Moves rearward", "Remains unchanged", "Moves vertically downward"], correct: 1, info: "Lowering the flaps changes the pressure distribution over the wing, moving the resultant aerodynamic force rearwards and creating a nose-down pitching tendency on many aircraft." },
 
-{ q: "Which statement about airflow over an aerofoil is correct?", options: ["Upper airflow is always slower", "Lower airflow is always turbulent", "Upper airflow generally accelerates and pressure falls", "Both surfaces always have equal pressure"], correct: 2, info: "Air accelerates over the upper surface, producing lower pressure and lift." },
+{ q: "For a typical take-off flap setting, the aerodynamic effect is:", options: ["A large increase in lift and a small increase in drag", "A large increase in lift and drag", "A small increase in lift and drag", "A decrease in lift and an increase in drag"], correct: 0, info: "Take-off flap settings are selected to provide a significant increase in lift while minimising the drag penalty." },
 
-{ q: "What is the boundary layer?", options: ["A layer of fuel vapour around the wing", "A thin layer of air directly affected by surface friction", "The airflow above the aircraft", "The air inside the wing"], correct: 1, info: "The boundary layer is the thin layer of air immediately adjacent to the aircraft surface where viscosity affects airflow." },
+{ q: "Wing spoilers may be used to:", options: ["Increase cruise lift", "Act as ground spoilers after landing", "Replace the rudder during flight", "Reduce engine thrust"], correct: 1, info: "Ground spoilers destroy lift after touchdown, transferring more weight onto the landing gear and improving braking effectiveness." },
 
-{ q: "What causes the boundary layer to form?", options: ["Engine thrust", "Air density", "Viscosity", "Gravity"], correct: 2, info: "The boundary layer forms because of the viscosity of air acting against the aircraft surface." },
+{ q: "The primary purpose of differential ailerons is to:", options: ["Increase pitch stability", "Reduce adverse yaw", "Increase lift during take-off", "Reduce induced drag"], correct: 1, info: "Differential ailerons reduce adverse yaw by allowing the upward-moving aileron to deflect further than the downward-moving aileron." },
 
-{ q: "Where is the airflow velocity lowest within the boundary layer?", options: ["At the outer edge", "At the wingtip", "Against the aircraft surface", "Halfway through the boundary layer"], correct: 2, info: "Air in contact with the surface has virtually zero velocity relative to the aircraft." },
+{ q: "Dutch Roll is an oscillation involving which two aircraft motions?", options: ["Pitch and roll", "Pitch and yaw", "Yaw and roll", "Roll and heave"], correct: 2, info: "Dutch Roll is a coupled oscillation involving yaw and roll, commonly associated with swept-wing aircraft." },
 
-{ q: "As airflow moves rearwards over a wing, the boundary layer generally:", options: ["Becomes thinner", "Disappears", "Becomes thicker", "Remains constant"], correct: 2, info: "The boundary layer grows in thickness as more air is slowed by friction." },
+{ q: "Which of the following are the primary flight control surfaces?", options: ["Elevators, roll spoilers and tabs", "Elevators, ailerons and rudder", "Flaps, slats and spoilers", "Elevators, flaps and rudder"], correct: 1, info: "The primary flight controls are the elevators, ailerons and rudder, which control pitch, roll and yaw respectively." },
 
-{ q: "Which type of boundary layer has the lowest skin friction drag?", options: ["Turbulent", "Separated", "Laminar", "Rotational"], correct: 2, info: "Laminar flow has the least skin friction drag." },
+{ q: "Which flight control surface primarily controls pitch?", options: ["Rudder", "Elevator", "Aileron", "Spoiler"], correct: 1, info: "The elevator controls aircraft movement about the lateral axis, producing pitch changes." },
 
-{ q: "Which type of boundary layer contains more energy?", options: ["Laminar", "Separated", "Turbulent", "Static"], correct: 2, info: "A turbulent boundary layer contains more kinetic energy than a laminar one." },
+{ q: "Which flight control surface primarily controls roll?", options: ["Elevator", "Spoiler", "Aileron", "Rudder"], correct: 2, info: "Ailerons control roll by changing lift on each wing." },
 
-{ q: "Why is a turbulent boundary layer often preferred near the trailing edge?", options: ["It produces less lift", "It delays flow separation", "It reduces aircraft weight", "It eliminates induced drag"], correct: 1, info: "The additional energy allows turbulent flow to remain attached longer." },
+{ q: "Which flight control surface primarily controls yaw?", options: ["Spoiler", "Elevator", "Trim tab", "Rudder"], correct: 3, info: "The rudder controls yaw by producing a side force on the vertical stabiliser." },
 
-{ q: "Boundary layer separation occurs when:", options: ["The airflow accelerates", "The airflow reverses direction and leaves the surface", "Pressure decreases continuously", "The aircraft exceeds Mach 1"], correct: 1, info: "Flow separation occurs when the boundary layer loses enough energy that it can no longer remain attached." },
+{ q: "What is the primary purpose of servo tabs fitted to large control surfaces?", options: ["To increase aerodynamic drag", "To reduce the pilot's control forces", "To increase aircraft stability", "To prevent flutter"], correct: 1, info: "Servo tabs use aerodynamic forces to help move the main control surface, reducing the force required by the pilot." },
 
-{ q: "What is the main cause of boundary layer separation?", options: ["Favourable pressure gradient", "Adverse pressure gradient", "Low humidity", "High engine power"], correct: 1, info: "An adverse pressure gradient slows the airflow until separation occurs." },
+{ q: "A balance tab normally moves:", options: ["In the same direction as the control surface", "In the opposite direction to the control surface", "Only when the autopilot is engaged", "Only during landing"], correct: 1, info: "A balance tab deflects opposite to the control surface to reduce control forces." },
 
-{ q: "Boundary layer separation results in:", options: ["Reduced drag", "Reduced lift and increased drag", "Increased lift only", "Improved stability"], correct: 1, info: "Separated airflow significantly increases drag while reducing lift." },
+{ q: "An anti-balance (anti-servo) tab moves:", options: ["In the same direction as the control surface", "In the opposite direction to the control surface", "Only when trimming", "Independently of the control surface"], correct: 0, info: "An anti-servo tab moves in the same direction as the control surface, increasing the control force and improving feel." },
 
-{ q: "Flow separation normally begins near which part of the wing?", options: ["Leading edge", "Wing root", "Trailing edge", "Wingtip"], correct: 2, info: "Flow separation usually starts near the trailing edge and progresses forward." },
+{ q: "The primary purpose of aerodynamic balancing is to:", options: ["Increase lift", "Reduce control forces", "Reduce induced drag", "Increase stall speed"], correct: 1, info: "Aerodynamic balancing reduces the effort required to move a control surface." },
 
-{ q: "What happens to lift as flow separation moves forward?", options: ["Lift increases", "Lift remains constant", "Lift decreases rapidly", "Lift doubles"], correct: 2, info: "Increasing separation destroys the pressure distribution that creates lift." },
+{ q: "Mass balancing of a control surface is primarily intended to prevent:", options: ["Adverse yaw", "Flutter", "Dutch roll", "Compressibility buffet"], correct: 1, info: "Mass balancing moves the centre of mass forward of the hinge line to reduce the risk of flutter." },
 
-{ q: "Which of the following is NOT a boundary layer control device?", options: ["Vortex generator", "Wing fence", "Pitot tube", "Slat"], correct: 2, info: "Pitot tubes measure pressure and do not control the boundary layer." },
+{ q: "Which type of balance is achieved by placing weights ahead of the control surface hinge line?", options: ["Aerodynamic balance", "Mass balance", "Static balance", "Dynamic balance"], correct: 1, info: "Mass balance weights reduce the tendency for control surface flutter." },
 
-{ q: "What is the purpose of vortex generators?", options: ["Increase aircraft weight", "Generate thrust", "Mix high-energy airflow into the boundary layer", "Reduce engine temperature"], correct: 2, info: "Vortex generators energise the boundary layer and delay separation." },
+{ q: "Flutter is best described as:", options: ["A slow rolling motion", "A self-excited structural vibration", "A form of adverse yaw", "A stall warning vibration"], correct: 1, info: "Flutter is a potentially destructive oscillation caused by interaction between aerodynamic, structural and inertial forces." },
 
-{ q: "Vortex generators delay:", options: ["Compressibility", "Boundary layer separation", "Fuel consumption", "Engine vibration"], correct: 1, info: "They create small vortices that keep airflow attached longer." },
+{ q: "If a control surface is incorrectly mass balanced, the aircraft is most at risk of:", options: ["Increased lift", "Flutter", "Reduced induced drag", "Lower stall speed"], correct: 1, info: "Incorrect mass balancing can allow flutter to develop within the aircraft's operating speed range." },
 
-{ q: "What is the primary purpose of wing fences?", options: ["Reduce spanwise airflow", "Increase engine thrust", "Reduce fuel consumption", "Strengthen the wing"], correct: 0, info: "Wing fences reduce spanwise airflow and delay wingtip stall." },
+{ q: "Which statement about trim tabs is correct?", options: ["They are primary flight controls", "They reduce the continuous control force required by the pilot", "They increase the maximum lift coefficient", "They prevent boundary layer separation"], correct: 1, info: "Trim tabs allow the aircraft to be trimmed so the pilot does not need to maintain constant control pressure." },
 
-{ q: "Leading-edge slats improve aircraft performance by:", options: ["Reducing engine noise", "Increasing wing loading", "Delaying boundary layer separation", "Reducing aircraft weight"], correct: 2, info: "Slats energise airflow over the wing, delaying stall." },
+{ q: "Why are trim tabs used during prolonged flight?", options: ["To increase manoeuvrability", "To reduce pilot workload by maintaining the desired control position", "To reduce drag during take-off", "To increase control surface travel"], correct: 1, info: "Trim tabs hold the control surface in the required position, reducing pilot fatigue on long flights." },
 
-{ q: "Boundary layer suction systems work by:", options: ["Adding compressed air", "Removing slow-moving air", "Cooling the wing", "Heating the wing"], correct: 1, info: "Suction removes the low-energy boundary layer before separation occurs." },
+{ q: "The angle between an aerofoil's chord line and the relative airflow is known as:", options: ["Angle of incidence", "Angle of attack", "Angle of dihedral", "Angle of sweep"], correct: 1, info: "The angle of attack is the angle between the chord line and the relative airflow." },
 
-{ q: "Blown flaps improve lift by:", options: ["Reducing wing area", "Directing high-energy air over the flap surface", "Increasing aircraft mass", "Lowering engine thrust"], correct: 1, info: "Engine bleed air is directed over the flap to energise the airflow." },
+{ q: "The imaginary straight line joining the leading edge to the trailing edge of an aerofoil is called the:", options: ["Mean camber line", "Chord line", "Centre line", "Pressure line"], correct: 1, info: "The chord line is the straight line joining the leading and trailing edges of an aerofoil." },
 
-{ q: "The angle of attack is defined as:", options: ["The angle between the wing chord and the horizon", "The angle between the chord line and the relative airflow", "The angle between the fuselage and the runway", "The wing incidence angle"], correct: 1, info: "Angle of attack is measured between the chord line and the relative airflow." },
+{ q: "The angle between the wing chord line and the aircraft longitudinal axis is known as the:", options: ["Angle of attack", "Angle of dihedral", "Angle of incidence", "Angle of sweep"], correct: 2, info: "The angle of incidence is the fixed angle between the wing chord line and the aircraft longitudinal axis." },
 
-{ q: "Increasing angle of attack generally causes lift to:", options: ["Decrease immediately", "Increase until the critical angle is reached", "Remain constant", "Become negative"], correct: 1, info: "Lift increases with angle of attack until the critical angle is exceeded." },
+{ q: "Wingtip vortices are the primary cause of:", options: ["Profile drag", "Form drag", "Induced drag", "Interference drag"], correct: 2, info: "Wingtip vortices are generated whenever lift is produced and are responsible for induced drag." },
 
-{ q: "The critical angle of attack is:", options: ["The highest angle before airflow separation causes a stall", "The aircraft climb angle", "The wing incidence angle", "The landing approach angle"], correct: 0, info: "Beyond the critical angle, lift decreases rapidly due to separation." },
+{ q: "The camber of an aerofoil is defined as:", options: ["The thickness of the aerofoil", "The curvature of the mean camber (median) line", "The angle of incidence", "The distance between the leading and trailing edges"], correct: 1, info: "Camber is the curvature of the mean camber line of the aerofoil." },
 
-{ q: "A wing stalls because:", options: ["Engine thrust is lost", "The critical angle of attack is exceeded", "The aircraft flies too slowly only", "The aircraft is too heavy"], correct: 1, info: "A stall always occurs when the critical angle of attack is exceeded." },
+{ q: "Induced drag is best described as drag that:", options: ["Is caused by skin friction", "Results from lift generation and wingtip vortices", "Is produced only at high Mach numbers", "Is independent of angle of attack"], correct: 1, info: "Induced drag is lift-dependent drag created by pressure differences around the wing and the resulting wingtip vortices." },
 
-{ q: "Can an aircraft stall at any airspeed?", options: ["No", "Only below 60 knots", "Only during landing", "Yes"], correct: 3, info: "Any aircraft can stall at any airspeed if the critical angle of attack is exceeded." },
+{ q: "As airflow passes over the upper surface of a cambered aerofoil, the airflow velocity generally:", options: ["Decreases while pressure increases", "Increases while pressure decreases", "Remains constant", "Increases while pressure also increases"], correct: 1, info: "According to Bernoulli's principle, increasing airflow velocity is accompanied by a reduction in static pressure." },
 
-{ q: "At the stall, the coefficient of lift reaches:", options: ["Minimum drag", "Maximum lift coefficient (CLmax)", "Zero lift", "Maximum thrust"], correct: 1, info: "CLmax occurs immediately before the stall." },
+{ q: "Which force acts vertically downward towards the centre of the Earth?", options: ["Lift", "Drag", "Thrust", "Weight"], correct: 3, info: "Weight is the gravitational force acting vertically downward through the aircraft's centre of gravity." },
 
-{ q: "After CLmax is exceeded:", options: ["Lift continues increasing", "Lift decreases sharply", "Drag disappears", "Weight decreases"], correct: 1, info: "Flow separation causes lift to fall rapidly." },
+{ q: "The angle of attack of an aerofoil is measured relative to the:", options: ["Aircraft longitudinal axis", "Relative airflow", "Horizontal plane", "Vertical axis"], correct: 1, info: "Angle of attack is always measured between the chord line and the relative airflow, not the aircraft attitude." },
 
-{ q: "As angle of attack increases toward the stall, induced drag:", options: ["Decreases", "Remains constant", "Increases", "Becomes zero"], correct: 2, info: "Induced drag increases significantly at high angles of attack." },
+{ q: "The chord line of an aerofoil is an imaginary straight line joining the:", options: ["Wing root and wingtip", "Leading edge and trailing edge", "Upper and lower surfaces", "Centre of pressure and centre of gravity"], correct: 1, info: "The chord line is the straight reference line used for defining angle of attack and angle of incidence." },
 
-{ q: "The first indication of an approaching stall is usually:", options: ["Engine failure", "Buffeting caused by airflow separation", "Loss of fuel pressure", "Landing gear vibration"], correct: 1, info: "Buffeting occurs as turbulent airflow develops ahead of the stall." },
+{ q: "Which condition will increase the lift produced by an aerofoil if all other factors remain constant?", options: ["Increasing air density", "Reducing wing area", "Reducing airspeed", "Reducing the lift coefficient"], correct: 0, info: "Lift is directly proportional to air density. Denser air allows the wing to generate more lift." },
 
-{ q: "A stall warning system is designed to alert the pilot:", options: ["After the aircraft stalls", "Before the critical angle of attack is reached", "Only during landing", "When the engine overheats"], correct: 1, info: "Stall warning devices activate shortly before the stall occurs." },
+{ q: "All of the following affect the lift produced by an aerofoil EXCEPT:", options: ["Angle of attack", "Wing area", "Air density", "Engine oil pressure"], correct: 3, info: "Lift depends on the lift coefficient (including angle of attack), air density, velocity and wing area. Engine oil pressure has no direct effect." },
 
-{ q: "Which part of a straight wing is normally designed to stall first?", options: ["Wingtip", "Wing root", "Trailing edge", "Leading edge"], correct: 1, info: "Root-first stall helps maintain aileron effectiveness." },
+{ q: "A wing section intended for high-speed flight is generally:", options: ["Thick with a high camber", "Thin with little or no camber", "Thick with a large leading-edge radius", "Highly cambered with a blunt trailing edge"], correct: 1, info: "High-speed wings are generally thin with little camber to delay compressibility effects and reduce drag." },
 
-{ q: "Why is wing-root stall preferred?", options: ["It improves fuel economy", "It preserves aileron control", "It reduces engine power", "It increases cruise speed"], correct: 1, info: "Keeping the wingtips flying maintains roll control during the stall." },
+{ q: "As aircraft speed increases in straight and level flight, induced drag generally:", options: ["Increases", "Decreases", "Remains constant", "Becomes greater than parasite drag"], correct: 1, info: "Increasing speed reduces the angle of attack required to maintain lift, decreasing induced drag." },
 
-{ q: "Wing washout is used to:", options: ["Increase fuel capacity", "Reduce root lift", "Delay wingtip stall", "Increase aircraft weight"], correct: 2, info: "Washout lowers the angle of attack at the wingtip." },
+{ q: "As aircraft speed increases, profile (parasite) drag:", options: ["Decreases", "Remains constant", "Increases", "Becomes zero"], correct: 2, info: "Profile (parasite) drag increases approximately with the square of airspeed." },
 
-{ q: "What is washout?", options: ["Twisting the wingtip to a lower angle of incidence", "Cleaning the wing surface", "Increasing wing thickness", "Adding slats"], correct: 0, info: "Washout ensures the wing root stalls before the tip." },
+{ q: "The stagnation point on an aerofoil is the point where:", options: ["Boundary layer separation begins", "Static pressure becomes zero", "The airflow is brought to rest", "Lift is greatest"], correct: 2, info: "The stagnation point is where the airflow velocity reduces to zero before dividing around the aerofoil." },
 
-{ q: "Which control surface is most affected by wingtip stall?", options: ["Elevator", "Aileron", "Rudder", "Trim tab"], correct: 1, info: "Ailerons are located near the wingtip and lose effectiveness if the tip stalls." },
+{ q: "An aerofoil stalls when:", options: ["The airspeed becomes too low", "The critical angle of attack is exceeded", "The engine loses power", "The aircraft exceeds its service ceiling"], correct: 1, info: "A stall always occurs when the critical angle of attack is exceeded, regardless of airspeed." },
 
-{ q: "What is the primary purpose of high-lift devices?", options: ["Increase cruise speed", "Increase lift at low airspeeds", "Reduce engine thrust", "Reduce aircraft weight"], correct: 1, info: "High-lift devices increase lift during take-off and landing." },
+{ q: "Which engine type is generally the most fuel efficient for modern transport aircraft?", options: ["Turbojet", "Rocket engine", "Turbofan", "Ramjet"], correct: 2, info: "High-bypass turbofan engines provide excellent propulsive efficiency and lower fuel consumption." },
 
-{ q: "High-lift devices are mainly used during:", options: ["Cruise only", "Take-off and landing", "High altitude flight only", "Engine start"], correct: 1, info: "High-lift devices are extended during take-off and landing to increase lift." },
+{ q: "If air density increases while all other variables remain constant, lift will:", options: ["Decrease", "Remain unchanged", "Increase", "Become independent of airspeed"], correct: 2, info: "Lift is directly proportional to air density according to the lift equation." },
 
-{ q: "Deploying flaps primarily changes the wing's:", options: ["Weight", "Camber", "Thickness", "Span"], correct: 1, info: "Flaps increase wing camber, increasing lift." },
+{ q: "The lift equation shows that lift is directly proportional to:", options: ["Wing area, air density, lift coefficient and the square of airspeed", "Aircraft weight only", "Engine thrust only", "Atmospheric pressure only"], correct: 0, info: "Lift = CL × ½ρV²S. Lift depends on lift coefficient, air density, velocity squared and wing area." },
 
-{ q: "Extending flaps generally causes lift to:", options: ["Decrease", "Increase", "Remain constant", "Become negative"], correct: 1, info: "Increasing wing camber produces greater lift." },
+{ q: "According to the lift equation, if the airspeed doubles while all other variables remain constant, lift will:", options: ["Double", "Triple", "Quadruple", "Remain unchanged"], correct: 2, info: "Lift is proportional to the square of the airspeed. Doubling the airspeed increases lift by four times." },
 
-{ q: "Deploying flaps also causes:", options: ["Reduced drag", "Increased drag", "Reduced weight", "Reduced thrust"], correct: 1, info: "Flaps increase both lift and drag." },
+{ q: "If the wing area of an aircraft is increased while all other factors remain constant, lift will:", options: ["Decrease", "Remain unchanged", "Increase", "Become independent of airspeed"], correct: 2, info: "Lift is directly proportional to wing plan area." },
 
-{ q: "Why is additional drag useful during landing?", options: ["It increases cruise speed", "It helps slow the aircraft", "It reduces fuel consumption", "It improves engine cooling"], correct: 1, info: "Extra drag allows steeper approaches and shorter landing distances." },
+{ q: "The lift coefficient (CL) primarily depends upon:", options: ["Aircraft weight", "Wing shape and angle of attack", "Engine thrust", "Atmospheric pressure only"], correct: 1, info: "The lift coefficient is determined mainly by the aerofoil shape and its angle of attack." },
 
-{ q: "Which trailing-edge flap is simply hinged downward?", options: ["Fowler flap", "Split flap", "Plain flap", "Kruger flap"], correct: 2, info: "The plain flap is the simplest trailing-edge flap design." },
+{ q: "Dynamic pressure is given by the expression:", options: ["ρV", "½ρV²", "ρ²V", "½V"], correct: 1, info: "Dynamic pressure is equal to one-half multiplied by air density multiplied by velocity squared." },
 
-{ q: "A split flap consists of:", options: ["The entire trailing edge moving", "Only the lower trailing edge surface deflecting", "Only the upper surface moving", "A movable leading edge"], correct: 1, info: "Split flaps use only the lower portion of the trailing edge." },
+{ q: "If airspeed increases by 50% while all other variables remain constant, dynamic pressure will:", options: ["Increase by 25%", "Increase by 50%", "Increase by 125%", "Double"], correct: 2, info: "Dynamic pressure varies with the square of velocity. 1.5² = 2.25, giving a 125% increase." },
 
-{ q: "Compared with a plain flap, a split flap generally produces:", options: ["Less drag", "More drag", "No lift increase", "No drag increase"], correct: 1, info: "Split flaps generate substantial drag while increasing lift." },
+{ q: "The aerodynamic force acting on a wing can be resolved into:", options: ["Weight and thrust", "Lift and drag", "Pitch and roll", "Static and dynamic pressure"], correct: 1, info: "The resultant aerodynamic force is resolved into lift, perpendicular to the airflow, and drag, parallel to it." },
 
-{ q: "A slotted flap increases lift because:", options: ["It decreases wing area", "Air passes through the slot and energises the upper surface airflow", "It blocks airflow", "It increases aircraft weight"], correct: 1, info: "The slot supplies high-energy air to delay boundary layer separation." },
+{ q: "The centre of pressure is defined as the point where:", options: ["The aircraft weight acts", "The resultant aerodynamic force acts", "The engine thrust acts", "The centre of gravity is located"], correct: 1, info: "The centre of pressure is the point through which the resultant aerodynamic force acts." },
 
-{ q: "The main advantage of a slotted flap is:", options: ["Reduced drag", "Delayed airflow separation", "Reduced weight", "Improved engine efficiency"], correct: 1, info: "High-energy airflow keeps the boundary layer attached longer." },
+{ q: "As the angle of attack increases up to the critical angle, the lift coefficient normally:", options: ["Decreases steadily", "Remains constant", "Increases to a maximum", "Becomes negative"], correct: 2, info: "CL increases with angle of attack until CLmax is reached at the critical angle." },
 
-{ q: "A Fowler flap differs from a plain flap because it:", options: ["Moves only downward", "Moves rearwards as well as downward", "Is located on the leading edge", "Reduces wing area"], correct: 1, info: "Fowler flaps increase both wing camber and wing area." },
+{ q: "Immediately after the critical angle of attack is exceeded, the lift coefficient:", options: ["Continues increasing", "Drops rapidly", "Remains constant", "Becomes equal to the drag coefficient"], correct: 1, info: "Flow separation causes the lift coefficient to decrease rapidly after CLmax." },
 
-{ q: "The Fowler flap increases:", options: ["Camber only", "Wing area only", "Both camber and wing area", "Neither"], correct: 2, info: "Fowler flaps slide rearwards before lowering." },
+{ q: "For maximum aerodynamic efficiency, an aircraft should be flown at the angle of attack corresponding to:", options: ["Maximum drag", "Maximum lift-to-drag ratio", "Minimum lift coefficient", "Maximum stall margin"], correct: 1, info: "Maximum L/D provides the greatest aerodynamic efficiency and best glide performance." },
 
-{ q: "Which flap design generally provides the greatest lift increase?", options: ["Plain flap", "Split flap", "Fowler flap", "Spoiler"], correct: 2, info: "Fowler flaps provide the largest increase in lift due to increased camber and wing area." },
+{ q: "When an aircraft stalls, what happens to lift and drag?", options: ["Lift increases and drag decreases", "Lift and drag both increase", "Lift decreases and drag increases", "Lift and drag both decrease"], correct: 2, info: "When the wing stalls, airflow separates from the upper surface, causing lift to decrease rapidly while drag increases." },
 
-{ q: "Blown flaps operate by:", options: ["Heating the wing", "Using engine bleed air over the flap", "Increasing fuel pressure", "Reducing wing loading"], correct: 1, info: "Bleed air energises the airflow over the flap surface." },
+{ q: "Spoiler panels are normally positioned so that, when deployed symmetrically, they:", options: ["Cause the aircraft to roll", "Minimise changes to pitch trim", "Produce a yawing moment", "Increase engine thrust"], correct: 1, info: "Spoilers are positioned to minimise undesirable pitching moments while reducing lift and increasing drag." },
 
-{ q: "Engine bleed air used by blown flaps serves to:", options: ["Reduce lift", "Delay boundary layer separation", "Increase stall speed", "Decrease wing area"], correct: 1, info: "High-energy air delays separation and increases lift." },
+{ q: "The stalling speed of an aircraft will:", options: ["Only change if the maximum take-off weight changes", "Remain unaffected by aircraft weight", "Increase as aircraft weight increases", "Decrease as aircraft weight increases"], correct: 2, info: "A heavier aircraft requires more lift to maintain level flight, increasing the stalling speed." },
 
-{ q: "Leading-edge devices are primarily designed to:", options: ["Reduce lift", "Delay stall", "Increase aircraft weight", "Reduce fuel consumption"], correct: 1, info: "Leading-edge devices delay airflow separation at high angles of attack." },
+{ q: "During a level banked turn:", options: ["Extra lift is not required if thrust is increased", "Extra lift is not required", "Extra lift is required", "Only additional thrust is required"], correct: 2, info: "Part of the lift is used to provide the centripetal force, so total lift must increase to maintain altitude." },
 
-{ q: "Which leading-edge device increases wing camber by folding out from beneath the wing?", options: ["Kruger flap", "Spoiler", "Split flap", "Aileron"], correct: 0, info: "Kruger flaps extend from the lower leading edge." },
+{ q: "Mass balancing of a control surface is achieved by:", options: ["Fitting bias strips to the trailing edge", "Attaching balance weights forward of the hinge line", "Allowing the leading edge to project into the airflow", "Installing trim tabs"], correct: 1, info: "Mass balance weights are installed ahead of the hinge line to reduce the risk of flutter." },
 
-{ q: "Kruger flaps are most commonly fitted to:", options: ["Straight wings", "Swept wings", "Helicopters", "Gliders"], correct: 1, info: "Kruger flaps are commonly used on swept-wing aircraft." },
+{ q: "Control surface flutter may be caused by:", options: ["Excessive play in trim-tab or control-surface attachments", "High static friction in the trim-tab linkage", "Small trim-tab deflections", "Low airspeed"], correct: 0, info: "Free play in hinges or trim-tab attachments can allow flutter to develop." },
 
-{ q: "Slats are located on the:", options: ["Trailing edge", "Leading edge", "Wingtip", "Fuselage"], correct: 1, info: "Slats are movable leading-edge devices." },
+{ q: "A differential aileron system reduces adverse yaw because:", options: ["The downward-deflecting aileron moves further than the upward one", "The upward-deflecting aileron moves further than the downward one", "Both ailerons move equally", "The rudder automatically compensates for yaw"], correct: 1, info: "Differential ailerons reduce drag on the downgoing wing by limiting its downward deflection." },
 
-{ q: "When deployed, slats create:", options: ["An exhaust duct", "A slot allowing high-energy airflow over the wing", "A spoiler", "A fuel vent"], correct: 1, info: "The slot energises the boundary layer." },
+{ q: "The primary function of a flap is to:", options: ["Trim the aircraft longitudinally", "Alter the position of the centre of gravity", "Increase the lift produced by the wing", "Provide roll control"], correct: 2, info: "Flaps increase wing camber, increasing lift at low airspeeds while also increasing drag." },
 
-{ q: "The principal effect of slats is to:", options: ["Reduce maximum lift", "Increase the stalling angle", "Increase drag only", "Reduce wing area"], correct: 1, info: "Slats delay stall by increasing the maximum usable angle of attack." },
+{ q: "The critical angle of attack at which a wing stalls can be delayed by:", options: ["Using flaps and slats", "Increasing aircraft weight", "Reducing engine power", "Moving the centre of gravity forward"], correct: 0, info: "High-lift devices such as flaps and slats delay airflow separation and increase the maximum usable angle of attack." },
 
-{ q: "Slots differ from slats because slots are:", options: ["Movable", "Fixed openings in the wing", "Trailing-edge devices", "Hydraulically powered"], correct: 1, info: "Slots are permanent openings built into the leading edge." },
+{ q: "Compared with a lighter aircraft in the same configuration, a heavier aircraft will:", options: ["Have a lower stalling speed", "Have the same stalling speed", "Have a higher stalling speed", "Always stall at a lower angle of attack"], correct: 2, info: "A heavier aircraft requires more lift and therefore stalls at a higher airspeed, although the critical angle of attack remains essentially unchanged." },
 
-{ q: "Which high-lift device remains permanently built into the wing?", options: ["Fowler flap", "Plain flap", "Slot", "Kruger flap"], correct: 2, info: "Slots are fixed apertures in the wing leading edge." },
+{ q: "Profile drag is made up of which three drag components?", options: ["Form drag, induced drag and interference drag", "Form drag, skin-friction drag and interference drag", "Induced drag, wave drag and form drag", "Skin-friction drag, wave drag and induced drag"], correct: 1, info: "Profile drag consists of form drag, skin-friction drag and interference drag." },
 
-{ q: "Automatic slats extend when:", options: ["Cabin pressure drops", "The angle of attack becomes sufficiently high", "The aircraft reaches cruise altitude", "The landing gear retracts"], correct: 1, info: "Automatic slats deploy when aerodynamic loads indicate a high angle of attack." },
+{ q: "In straight and level unaccelerated flight, the aircraft is subjected to a load factor of:", options: ["0 g", "0.5 g", "1 g", "2 g"], correct: 2, info: "In steady straight and level flight, lift equals weight, producing a load factor of 1 g." },
 
-{ q: "Modern airliners commonly use which flap arrangement?", options: ["Plain flap", "Single split flap", "Multi-slotted Fowler flap", "Spoiler flap"], correct: 2, info: "Most transport aircraft use multi-slotted Fowler flaps for maximum lift." },
+{ q: "Which expression correctly represents aspect ratio?", options: ["Mean Chord ÷ Span", "Span² ÷ Wing Area", "Wing Area ÷ Span²", "Span ÷ Wing Area"], correct: 1, info: "Aspect ratio is calculated as span squared divided by wing area. For a rectangular wing, it is also equal to span divided by mean chord." },
 
-{ q: "A Boeing 747 uses:", options: ["Plain flaps only", "Split flaps only", "Multi-slotted Fowler flaps", "No flaps"], correct: 2, info: "Large transport aircraft typically use multi-slotted Fowler flap systems." },
+{ q: "An aircraft wing with an aspect ratio of 8 means that the:", options: ["Wing area is eight times the span", "Span is eight times the mean chord", "Mean chord is eight times the span", "Wing loading equals 8"], correct: 1, info: "For a rectangular wing, aspect ratio equals span divided by mean chord." },
 
-{ q: "High-lift devices primarily reduce:", options: ["Cruise speed", "Stall speed", "Engine RPM", "Fuel quantity"], correct: 1, info: "Increasing CLmax reduces the stall speed." },
+{ q: "Compared with a low aspect ratio wing, a high aspect ratio wing generally:", options: ["Produces more induced drag", "Produces less induced drag", "Has a lower lift-to-drag ratio", "Stalls at a much higher angle of attack"], correct: 1, info: "Long, slender wings produce weaker wingtip vortices and therefore less induced drag." },
 
-{ q: "Extending flaps allows the aircraft to:", options: ["Fly safely at lower airspeeds", "Increase Mach number", "Reduce lift", "Increase service ceiling"], correct: 0, info: "Greater lift allows controlled flight at lower speeds." },
+{ q: "Induced downwash has what effect on the wing's effective angle of attack?", options: ["It increases the effective angle of attack", "It reduces the effective angle of attack", "It has no effect on angle of attack", "It only affects swept wings"], correct: 1, info: "Downwash changes the direction of the relative airflow, reducing the effective angle of attack." },
 
-{ q: "During take-off, flap selection is usually:", options: ["Maximum", "Partial", "Zero", "Full landing flap"], correct: 1, info: "Partial flap provides extra lift without excessive drag." },
+{ q: "On a straight rectangular wing with no geometric twist, the effective angle of attack near the wingtip is generally:", options: ["Greater than at the wing root", "Approximately zero", "Less than at the wing root because of induced downwash", "Identical to the geometric angle of attack"], correct: 2, info: "Although the geometric incidence is constant, greater downwash near the wingtip reduces the effective angle of attack." },
 
-{ q: "During landing, flap selection is generally:", options: ["Zero", "Partial", "Maximum", "Negative"], correct: 2, info: "Maximum flap provides the greatest lift and drag for landing." },
+{ q: "Two rectangular wings have dimensions of 12 m span × 2 m chord and 6 m span × 1 m chord. Their aspect ratios are:", options: ["The first is higher", "The second is higher", "They are the same", "They cannot be compared without wing loading"], correct: 2, info: "Aspect ratio equals span divided by chord for rectangular wings. Both wings have an aspect ratio of 6." },
 
-{ q: "Why are flaps normally retracted during cruise?", options: ["To increase drag", "To reduce drag and improve fuel efficiency", "To increase stall speed", "To improve braking"], correct: 1, info: "Retracted flaps minimise drag and maximise cruise efficiency." },
+{ q: "During normal flight, the most common reason for the aircraft centre of gravity to change is:", options: ["Passenger movement", "Fuel and oil consumption", "Cargo shifting", "Extension of the landing gear"], correct: 1, info: "The gradual consumption of fuel and oil changes the aircraft's centre of gravity during flight." },
 
-{ q: "Increasing wing camber primarily increases:", options: ["Lift coefficient", "Aircraft mass", "Engine thrust", "Fuel capacity"], correct: 0, info: "Greater camber increases the lift coefficient." },
+{ q: "A straight rectangular wing without twist will normally stall first at the:", options: ["Wingtip", "Mid-span", "Wing root", "Trailing edge"], correct: 2, info: "Greater induced downwash near the wingtip reduces its effective angle of attack, causing the wing root to reach the critical angle first." },
 
-{ q: "The main disadvantage of using high-lift devices is:", options: ["Higher drag", "Reduced lift", "Lower angle of attack", "Reduced wing area"], correct: 0, info: "The increase in drag is the trade-off for increased lift." },
+{ q: "The pressure measured at the stagnation point is:", options: ["Static pressure only", "Dynamic pressure only", "Total pressure (static pressure + dynamic pressure)", "Atmospheric pressure only"], correct: 2, info: "At the stagnation point the airflow velocity is reduced to zero, so the pressure equals the total pressure (static plus dynamic)." },
 
-{ q: "Which statement best describes lift augmentation devices?", options: ["They only reduce drag", "They increase maximum lift coefficient", "They reduce aircraft weight", "They increase engine power"], correct: 1, info: "High-lift devices increase the maximum lift coefficient (CLmax)." },
+{ q: "On a swept-wing aircraft, the boundary layer on the upper surface tends to move:", options: ["Towards the wing root", "Towards the wingtip", "Directly from leading edge to trailing edge", "Vertically away from the wing"], correct: 1, info: "Spanwise flow causes the boundary layer to migrate towards the wingtip, increasing the likelihood of tip stall." },
 
-{ q: "What is camber?", options: ["The thickness of the wing", "The curvature of an aerofoil", "The angle between the wing and fuselage", "The length of the wing"], correct: 1, info: "Camber is the curvature of the upper and lower surfaces of an aerofoil." },
+{ q: "During straight and level flight, increasing airspeed causes profile drag to:", options: ["Decrease", "Remain constant", "Increase", "Become equal to induced drag"], correct: 2, info: "Profile (parasite) drag increases approximately with the square of airspeed." },
 
-{ q: "The mean camber line is:", options: ["The upper surface of the aerofoil", "The lower surface of the aerofoil", "A line halfway between the upper and lower surfaces", "The leading edge"], correct: 2, info: "The mean camber line is drawn midway between the upper and lower aerofoil surfaces." },
+{ q: "If a swept wing stalls at the tips first, the aircraft will tend to:", options: ["Pitch nose up", "Pitch nose down", "Remain level", "Yaw only"], correct: 0, info: "Loss of lift behind the centre of gravity creates a nose-up pitching moment on many swept-wing aircraft." },
 
-{ q: "The chord line joins the:", options: ["Wing root and wingtip", "Leading edge and trailing edge", "Upper and lower surfaces", "Wingtip and fuselage"], correct: 1, info: "The chord line is the straight line joining the leading and trailing edges." },
+{ q: "The ratio of wing thickness to chord is commonly known as the:", options: ["Aspect ratio", "Mean chord ratio", "Fineness ratio", "Lift ratio"], correct: 2, info: "The thickness-to-chord ratio is commonly referred to as the fineness ratio." },
 
-{ q: "The leading edge is:", options: ["The rear of the wing", "The front of the aerofoil", "The thickest part of the wing", "The wingtip"], correct: 1, info: "The leading edge is the foremost part of the aerofoil." },
+{ q: "As a rearward-swept wing flexes upward in flight, the effective angle of attack generally:", options: ["Increases", "Decreases", "Remains unchanged", "Becomes negative"], correct: 1, info: "Wing flexure reduces the effective angle of attack on a rearward-swept wing, reducing lift and limiting further flexure." },
 
-{ q: "The trailing edge is:", options: ["The front of the wing", "The point where airflow first contacts the wing", "The rear of the aerofoil", "The wing root"], correct: 2, info: "The trailing edge is where airflow leaves the wing." },
+{ q: "A high aspect ratio wing is characterised by:", options: ["Short span and long chord", "Long span and short chord", "Short span and short chord", "Long span and long chord"], correct: 1, info: "High aspect ratio wings are long and slender, reducing induced drag." },
 
-{ q: "Angle of incidence is the angle between:", options: ["Chord line and relative airflow", "Chord line and aircraft longitudinal axis", "Wingtip and fuselage", "Lift and drag"], correct: 1, info: "Angle of incidence is built into the aircraft during manufacture." },
+{ q: "Why is it preferable for a wing to stall first at the root?", options: ["It gives aerodynamic buffet warning before full stall", "It increases cruise speed", "It reduces induced drag", "It improves fuel economy"], correct: 0, info: "Root-first stall produces buffet over the tailplane and leaves the ailerons effective for longer." },
 
-{ q: "Unlike angle of attack, angle of incidence is:", options: ["Variable", "Fixed", "Dependent on speed", "Dependent on altitude"], correct: 1, info: "The angle of incidence is fixed and cannot normally be changed in flight." },
+{ q: "What aerodynamic design feature is commonly used to ensure the wing root stalls before the wingtip?", options: ["Wing washout", "Wing sweep", "Increased wing loading", "Reduced dihedral"], correct: 0, info: "Washout reduces the angle of incidence at the wingtip, delaying tip stall." },
 
-{ q: "Thickness-to-chord ratio is also known as:", options: ["Aspect ratio", "Camber ratio", "Fineness ratio", "Lift ratio"], correct: 2, info: "Thickness divided by chord is called the fineness ratio." },
+{ q: "Which statement about wingtip stall is correct?", options: ["It generally preserves aileron effectiveness", "It reduces the likelihood of a wing drop", "It can result in reduced roll control due to loss of aileron effectiveness", "It always occurs before root stall on straight wings"], correct: 2, info: "If the wingtip stalls first, the ailerons become ineffective, making roll control difficult." },
 
-{ q: "Aircraft designers choose aerofoil thickness primarily to optimise:", options: ["Fuel colour", "Aerodynamic performance", "Cabin pressure", "Landing gear length"], correct: 1, info: "Different thickness ratios provide different aerodynamic characteristics." },
+{ q: "The pressure measured at the stagnation point is:", options: ["Static pressure only", "Dynamic pressure only", "Total pressure (static pressure + dynamic pressure)", "Atmospheric pressure only"], correct: 2, info: "At the stagnation point the airflow velocity is reduced to zero, so the pressure equals the total (stagnation) pressure." },
 
-{ q: "Total drag is:", options: ["Only induced drag", "Only parasite drag", "The sum of all drag components", "Lift divided by drag"], correct: 2, info: "Total drag equals the combined effects of parasite and induced drag." },
+{ q: "On a swept-wing aircraft, the boundary layer on the upper surface tends to flow:", options: ["Towards the wing root", "Towards the wingtip", "Directly from the leading edge to the trailing edge", "Vertically away from the wing"], correct: 1, info: "Spanwise flow causes the boundary layer to migrate towards the wingtip, increasing the likelihood of tip stall." },
 
-{ q: "Parasite drag is independent of:", options: ["Aircraft speed", "Lift production", "Surface roughness", "Aircraft shape"], correct: 1, info: "Parasite drag exists whether or not lift is being produced." },
+{ q: "As speed increases during straight and level flight:", options: ["Induced drag increases", "Profile drag increases", "Profile drag remains constant", "Induced and profile drag remain constant"], correct: 1, info: "Profile (parasite) drag increases approximately with the square of airspeed, while induced drag decreases." },
 
-{ q: "Profile drag consists of:", options: ["Skin friction, form drag and interference drag", "Lift and drag", "Wave drag and induced drag", "Pressure drag only"], correct: 0, info: "Profile drag is made up of skin friction, form and interference drag." },
+{ q: "If a swept wing stalls at the tips first, the aircraft will tend to:", options: ["Pitch nose up", "Pitch nose down", "Remain level", "Yaw to the left"], correct: 0, info: "Loss of lift at the wing tips, which are behind the centre of gravity, creates a nose-up pitching moment." },
 
-{ q: "Skin friction drag is caused by:", options: ["Shock waves", "Air rubbing against the aircraft surface", "Wingtip vortices", "Gravity"], correct: 1, info: "Skin friction results from viscous friction between the airflow and aircraft surface." },
+{ q: "The thickness-to-chord ratio of a wing is commonly referred to as the:", options: ["Aspect ratio", "Mean chord ratio", "Fineness ratio", "Camber ratio"], correct: 2, info: "The thickness-to-chord ratio is commonly known as the fineness ratio." },
 
-{ q: "Skin friction drag increases when:", options: ["Surface becomes smoother", "Surface roughness increases", "Aircraft weight decreases", "Wing loading decreases"], correct: 1, info: "Rough surfaces disturb airflow and increase skin friction." },
+{ q: "Upward flexure of a rearward-swept wing generally:", options: ["Increases lift and increases further flexure", "Increases lift but decreases flexure", "Decreases lift and therefore reduces further flexure", "Has no effect on lift"], correct: 2, info: "Flexure reduces the effective angle of attack on a swept wing, reducing lift and limiting additional bending." },
 
-{ q: "Polishing an aircraft primarily reduces:", options: ["Induced drag", "Skin friction drag", "Lift", "Weight"], correct: 1, info: "A smoother surface produces less skin friction drag." },
+{ q: "A high aspect ratio wing is characterised by:", options: ["Short span and long chord", "Long span and short chord", "Long span and long chord", "Short span and short chord"], correct: 1, info: "High aspect ratio wings are long and slender, reducing induced drag." },
 
-{ q: "Form drag depends mainly upon:", options: ["Aircraft shape", "Aircraft weight", "Engine size", "Fuel quantity"], correct: 0, info: "Bluff shapes produce much greater form drag than streamlined ones." },
+{ q: "Why is it preferable for a wing to stall first at the root?", options: ["It provides aerodynamic buffet warning while maintaining aileron effectiveness", "It increases cruise performance", "It reduces profile drag", "It lowers the aircraft's weight"], correct: 0, info: "Root-first stall gives the pilot buffet warning and keeps the wing tips, and therefore the ailerons, flying for longer." },
 
-{ q: "A streamlined aircraft produces:", options: ["More form drag", "Less form drag", "More induced drag", "More weight"], correct: 1, info: "Streamlining delays airflow separation and reduces drag." },
+{ q: "Which design feature is commonly used to ensure the wing root stalls before the wingtip?", options: ["Wing washout", "Reduced wing span", "Increased dihedral", "Forward wing sweep"], correct: 0, info: "Washout reduces the angle of incidence towards the wingtip, delaying tip stall." },
 
-{ q: "Form drag is largely caused by:", options: ["Pressure differences around the body", "Fuel temperature", "Humidity", "Engine RPM"], correct: 0, info: "Pressure drag develops because airflow separates behind bluff bodies." },
+{ q: "If the wingtip stalls before the wing root, the pilot will most likely experience:", options: ["Improved roll control", "Reduced aileron effectiveness and a tendency for a wing drop", "Lower induced drag", "A reduction in stall speed"], correct: 1, info: "Wingtip stall causes the ailerons to lose effectiveness, making roll control difficult and increasing the likelihood of a wing drop." },
 
-{ q: "Interference drag occurs where:", options: ["Airflow from different aircraft surfaces meets", "The engine starts", "Fuel enters the wing", "The landing gear retracts"], correct: 0, info: "Interference drag is created where airflow interacts at junctions." },
+{ q: "The pressure measured at the stagnation point is:", options: ["Static pressure only", "Dynamic pressure only", "Total pressure (static pressure + dynamic pressure)", "Atmospheric pressure only"], correct: 2, info: "At the stagnation point the airflow velocity is reduced to zero, so the pressure equals the total (stagnation) pressure." },
 
-{ q: "Which location commonly produces interference drag?", options: ["Wing-fuselage junction", "Cockpit window", "Pitot tube", "Cabin ceiling"], correct: 0, info: "Wing-fuselage junctions are major sources of interference drag." },
+{ q: "On a swept-wing aircraft, the boundary layer on the upper surface tends to flow:", options: ["Towards the wing root", "Towards the wingtip", "Directly from the leading edge to the trailing edge", "Vertically away from the wing"], correct: 1, info: "Spanwise flow causes the boundary layer to migrate towards the wingtip, increasing the likelihood of tip stall." },
 
-{ q: "Fairings are fitted primarily to reduce:", options: ["Weight", "Interference drag", "Lift", "Thrust"], correct: 1, info: "Fairings smooth airflow around structural junctions." },
+{ q: "As speed increases during straight and level flight:", options: ["Induced drag increases", "Profile drag increases", "Profile drag remains constant", "Induced and profile drag remain constant"], correct: 1, info: "Profile (parasite) drag increases approximately with the square of airspeed, while induced drag decreases." },
 
-{ q: "Induced drag is produced whenever:", options: ["The aircraft is painted", "Lift is generated", "The landing gear is extended", "The engine is shut down"], correct: 1, info: "Induced drag is a direct consequence of lift production." },
+{ q: "If a swept wing stalls at the tips first, the aircraft will tend to:", options: ["Pitch nose up", "Pitch nose down", "Remain level", "Yaw to the left"], correct: 0, info: "Loss of lift at the wing tips, which are behind the centre of gravity, creates a nose-up pitching moment." },
 
-{ q: "Wingtip vortices form because air moves:", options: ["From low pressure above the wing to high pressure below", "From high pressure below the wing to low pressure above", "Only behind the aircraft", "Vertically upwards"], correct: 1, info: "Air naturally flows from the high-pressure lower surface around the wingtip to the low-pressure upper surface." },
+{ q: "The thickness-to-chord ratio of a wing is commonly referred to as the:", options: ["Aspect ratio", "Mean chord ratio", "Fineness ratio", "Camber ratio"], correct: 2, info: "The thickness-to-chord ratio is commonly known as the fineness ratio." },
 
-{ q: "Wingtip vortices primarily increase:", options: ["Lift", "Induced drag", "Engine thrust", "Cabin pressure"], correct: 1, info: "Wingtip vortices are responsible for induced drag." },
+{ q: "Upward flexure of a rearward-swept wing generally:", options: ["Increases lift and increases further flexure", "Increases lift but decreases flexure", "Decreases lift and therefore reduces further flexure", "Has no effect on lift"], correct: 2, info: "Flexure reduces the effective angle of attack on a swept wing, reducing lift and limiting additional bending." },
 
-{ q: "Induced drag is greatest when:", options: ["Flying fast at low angle of attack", "Flying slowly at high angle of attack", "During descent only", "With the engine stopped"], correct: 1, info: "High angle of attack produces stronger wingtip vortices." },
+{ q: "A high aspect ratio wing is characterised by:", options: ["Short span and long chord", "Long span and short chord", "Long span and long chord", "Short span and short chord"], correct: 1, info: "High aspect ratio wings are long and slender, reducing induced drag." },
 
-{ q: "Increasing airspeed in level flight generally causes induced drag to:", options: ["Increase", "Decrease", "Remain constant", "Become zero"], correct: 1, info: "Higher airspeed requires a lower angle of attack, reducing induced drag." },
+{ q: "Why is it preferable for a wing to stall first at the root?", options: ["It provides aerodynamic buffet warning while maintaining aileron effectiveness", "It increases cruise performance", "It reduces profile drag", "It lowers the aircraft's weight"], correct: 0, info: "Root-first stall gives the pilot buffet warning and keeps the wing tips, and therefore the ailerons, flying for longer." },
 
-{ q: "Profile drag generally varies with:", options: ["The square of airspeed", "Altitude only", "Aircraft weight", "Fuel flow"], correct: 0, info: "Profile drag increases approximately with the square of airspeed." },
+{ q: "Which design feature is commonly used to ensure the wing root stalls before the wingtip?", options: ["Wing washout", "Reduced wing span", "Increased dihedral", "Forward wing sweep"], correct: 0, info: "Washout reduces the angle of incidence towards the wingtip, delaying tip stall." },
 
-{ q: "Induced drag generally varies:", options: ["Directly with the square of speed", "Inversely with the square of speed", "Only with weight", "Only with altitude"], correct: 1, info: "Induced drag decreases rapidly as airspeed increases." },
+{ q: "If the wingtip stalls before the wing root, the pilot will most likely experience:", options: ["Improved roll control", "Reduced aileron effectiveness and a tendency for a wing drop", "Lower induced drag", "A reduction in stall speed"], correct: 1, info: "Wingtip stall causes the ailerons to lose effectiveness, making roll control difficult and increasing the likelihood of a wing drop." },
 
-{ q: "Minimum total drag occurs when:", options: ["Induced drag equals profile drag", "Profile drag is zero", "Induced drag is zero", "Lift equals weight"], correct: 0, info: "Minimum total drag occurs where the induced and profile drag curves intersect." },
+{ q: "During a steady glide, the aircraft is considered to be:", options: ["Accelerating", "In equilibrium", "Climbing", "Stalling"], correct: 1, info: "In a steady glide the aircraft is descending at a constant speed with all forces in equilibrium." },
 
-{ q: "Flying at minimum total drag provides:", options: ["Maximum fuel consumption", "Best aerodynamic efficiency", "Maximum stall speed", "Maximum wave drag"], correct: 1, info: "Minimum drag gives the most efficient flight condition." },
+{ q: "In gliding flight, the tangent of the glide angle is equal to:", options: ["Lift ÷ Drag", "Weight ÷ Lift", "Drag ÷ Lift", "Thrust ÷ Weight"], correct: 2, info: "For a steady glide, tanγ = Drag ÷ Lift." },
 
-{ q: "Aspect ratio is defined as:", options: ["Wing area divided by fuselage length", "Wingspan squared divided by wing area", "Chord divided by span", "Thickness divided by span"], correct: 1, info: "Aspect ratio equals span² divided by wing area." },
+{ q: "The horizontal distance travelled during a glide is known as the:", options: ["Endurance", "Range", "Service ceiling", "Radius of turn"], correct: 1, info: "Glide range is the horizontal distance travelled before reaching the ground." },
 
-{ q: "High aspect ratio wings generally produce:", options: ["Greater induced drag", "Lower induced drag", "No lift", "Greater form drag"], correct: 1, info: "Long, slender wings reduce wingtip vortices." },
+{ q: "The greatest glide range is achieved when:", options: ["Drag is greatest", "Lift-to-drag ratio is at its maximum", "Weight is greatest", "Flaps are fully extended"], correct: 1, info: "Maximum glide range occurs at the maximum lift-to-drag ratio (L/D)." },
 
-{ q: "Gliders usually have:", options: ["Low aspect ratio wings", "High aspect ratio wings", "Delta wings", "Swept wings"], correct: 1, info: "Gliders use high aspect ratio wings to minimise induced drag." },
+{ q: "If an aircraft loses engine power and thrust becomes less than drag, constant airspeed can be maintained by:", options: ["Climbing", "Descending", "Increasing angle of attack only", "Extending the landing gear"], correct: 1, info: "With insufficient thrust, the aircraft must descend to maintain a constant airspeed." },
 
-{ q: "Washout reduces:", options: ["Fuel capacity", "Wingtip stall tendency", "Engine thrust", "Aircraft weight"], correct: 1, info: "Washout lowers the angle of attack at the wingtip." },
+{ q: "During a constant-speed climb:", options: ["Drag is greater than thrust", "Thrust is greater than drag", "Lift is greater than thrust", "Weight is less than drag"], correct: 1, info: "A climb requires excess thrust over drag." },
 
-{ q: "Wash-in refers to:", options: ["Increasing angle of incidence toward the wingtip", "Reducing wing thickness", "Reducing aspect ratio", "Installing slats"], correct: 0, info: "Wash-in increases the angle of incidence toward the tip and is generally undesirable." },
+{ q: "In a steady vertical climb at constant speed:", options: ["Lift equals weight", "Thrust equals drag only", "Thrust must exceed weight plus drag", "Weight equals thrust"], correct: 2, info: "For a vertical climb, thrust must overcome both the aircraft's weight and aerodynamic drag." },
 
-{ q: "One purpose of leading-edge stall strips is to:", options: ["Increase cruise speed", "Ensure the wing root stalls before the tip", "Reduce fuel flow", "Increase engine cooling"], correct: 1, info: "Stall strips promote root-first stall, preserving aileron effectiveness." },
+{ q: "In straight and level unaccelerated flight:", options: ["Lift equals weight and thrust equals drag", "Lift exceeds weight", "Drag exceeds thrust", "Weight exceeds lift"], correct: 0, info: "Steady, level flight exists when all forces are balanced." },
 
-{ q: "Which wing design produces the smallest wingtip vortices?", options: ["Low aspect ratio wing", "High aspect ratio wing", "Delta wing", "Swept wing"], correct: 1, info: "Long, narrow wings reduce vortex strength." },
+{ q: "Aircraft equilibrium requires:", options: ["Balanced forces only", "Balanced moments only", "Balanced forces and balanced moments", "Equal lift and thrust"], correct: 2, info: "Both the forces and the moments acting on the aircraft must balance for equilibrium." },
 
-{ q: "In straight and level unaccelerated flight, lift is equal to:", options: ["Drag", "Thrust", "Weight", "Power"], correct: 2, info: "In steady level flight, lift balances weight." },
+{ q: "The primary purpose of the tailplane is to:", options: ["Provide roll control", "Balance the aircraft's pitching moments", "Reduce induced drag", "Increase lift during take-off"], correct: 1, info: "The tailplane provides the balancing force required for longitudinal stability and trim." },
 
-{ q: "In straight and level unaccelerated flight, thrust is equal to:", options: ["Lift", "Weight", "Drag", "Power"], correct: 2, info: "In steady flight, thrust balances drag." },
+{ q: "Why is the horizontal tailplane normally much smaller than the main wing?", options: ["It produces less drag only", "It operates at higher airspeed", "Its long moment arm allows a relatively small force to balance pitching moments", "It carries less structural load"], correct: 2, info: "Because the tailplane is positioned a considerable distance behind the centre of gravity, a relatively small force can produce a large balancing moment (Moment = Force × Distance)." },
 
-{ q: "The aerodynamic force is the:", options: ["Engine thrust", "Resultant force produced by airflow over an aerofoil", "Aircraft weight", "Fuel pressure"], correct: 1, info: "The aerodynamic force is the single resultant force produced by airflow acting on the aerofoil." },
+{ q: "At high cruise speed, the angle of attack of the main wing is generally:", options: ["Greater than during approach", "Approximately zero", "Smaller than at low speed", "Greater than the tailplane"], correct: 2, info: "At high speed less angle of attack is required to produce the necessary lift." },
 
-{ q: "The aerodynamic force can be resolved into:", options: ["Lift and drag", "Weight and thrust", "Pitch and roll", "Pressure and density"], correct: 0, info: "The aerodynamic force consists of lift and drag components." },
+{ q: "As the centre of pressure moves rearwards at high speed, the aircraft tends to:", options: ["Pitch nose up", "Develop a nose-down pitching moment", "Roll to the left", "Yaw towards the dead engine"], correct: 1, info: "A rearward movement of the centre of pressure creates a nose-down pitching moment which must be balanced by the tailplane." },
 
-{ q: "Lift always acts:", options: ["Parallel to the relative airflow", "Perpendicular to the relative airflow", "Vertically upward", "Parallel to the aircraft fuselage"], correct: 1, info: "Lift acts at right angles to the relative airflow." },
+{ q: "To balance the rearward movement of the centre of pressure during high-speed flight, the tailplane commonly produces:", options: ["An upward aerodynamic force", "A downward aerodynamic force", "No aerodynamic force", "Equal lift to the main wing"], correct: 1, info: "Many conventional aircraft require a downward tail force during cruise to maintain longitudinal equilibrium." },
 
-{ q: "Drag always acts:", options: ["Parallel to the relative airflow", "Perpendicular to the relative airflow", "Vertically downward", "Toward the wingtip"], correct: 0, info: "Drag acts parallel and opposite to the direction of the relative airflow." },
+{ q: "At low speed with a high angle of attack, the centre of pressure generally:", options: ["Moves rearwards", "Moves forwards", "Remains fixed", "Moves to the wingtip"], correct: 1, info: "Increasing angle of attack moves the centre of pressure forwards on a conventional cambered aerofoil." },
 
-{ q: "Weight acts:", options: ["Perpendicular to the wing", "Toward the centre of the Earth", "Parallel to thrust", "Along the aircraft centreline"], correct: 1, info: "Weight always acts vertically downward toward the Earth's centre." },
+{ q: "Because the tailplane may be required to produce either upward or downward aerodynamic force, it is commonly constructed using a:", options: ["Highly cambered aerofoil", "Symmetrical aerofoil section", "Flat plate aerofoil", "Supercritical aerofoil"], correct: 1, info: "A symmetrical aerofoil allows the tailplane to generate force efficiently in either direction." },
 
-{ q: "Thrust acts primarily:", options: ["Opposite to lift", "Along the engine thrust line", "Perpendicular to drag", "Toward the wingtip"], correct: 1, info: "Thrust acts in the direction of the engine thrust line." },
+{ q: "An all-moving tailplane differs from a conventional tailplane because:", options: ["Only the elevator moves", "The complete stabiliser changes its angle", "The trim tab is removed", "It has no control surface"], correct: 1, info: "An all-moving tailplane changes the incidence of the entire horizontal stabiliser, providing greater pitch authority." },
 
-{ q: "Increasing aircraft weight requires:", options: ["Less lift", "More lift", "Less drag", "Lower angle of attack"], correct: 1, info: "A heavier aircraft requires greater lift to maintain level flight." },
+{ q: "Which relationship is used to calculate a pitching moment?", options: ["Moment = Force ÷ Distance", "Moment = Force × Distance", "Moment = Mass × Velocity", "Moment = Lift ÷ Weight"], correct: 1, info: "The basic engineering relationship is Moment = Force × Perpendicular Distance." },
 
-{ q: "An increase in lift generally causes:", options: ["Reduced drag", "Increased drag", "Reduced weight", "Reduced thrust"], correct: 1, info: "Producing more lift also increases induced drag." },
+{ q: "For an aircraft to remain in equilibrium during steady flight:", options: ["Only lift and weight must balance", "Only thrust and drag must balance", "Both the forces and the moments must balance", "The centre of pressure must coincide with the centre of gravity"], correct: 2, info: "Steady equilibrium requires both translational and rotational equilibrium." },
 
-{ q: "The coefficient of lift is represented by:", options: ["CD", "CM", "CL", "CP"], correct: 2, info: "CL is the lift coefficient." },
+{ q: "If the four primary aerodynamic forces act through different points on the aircraft, stable flight is maintained only if:", options: ["Lift exceeds weight", "The resulting moments balance each other", "Thrust exceeds drag", "The centre of pressure equals the centre of gravity"], correct: 1, info: "Because the forces act at different locations, their moments must balance to prevent pitching." },
 
-{ q: "The coefficient of drag is represented by:", options: ["CM", "CL", "CD", "CP"], correct: 2, info: "CD is the drag coefficient." },
+{ q: "What force keeps an aircraft following a curved flight path during a coordinated turn?", options: ["Centrifugal force", "Centripetal force", "Weight", "Thrust"], correct: 1, info: "Centripetal force acts towards the centre of the turn and keeps the aircraft following a curved path." },
 
-{ q: "The pitching moment coefficient is represented by:", options: ["CL", "CM", "CD", "CP"], correct: 1, info: "CM represents the pitching moment coefficient." },
+{ q: "In a correctly coordinated level turn, the horizontal component of lift provides the:", options: ["Aircraft weight", "Drag force", "Centripetal force", "Engine thrust"], correct: 2, info: "The horizontal component of lift provides the centripetal force required to turn the aircraft." },
 
-{ q: "Lift depends upon:", options: ["Wing area only", "Aircraft weight only", "Wing shape, air density, velocity, wing area and angle of attack", "Fuel quantity only"], correct: 2, info: "Lift depends upon several aerodynamic factors including CL, air density, velocity and wing area." },
+{ q: "In a steady level turn, the vertical component of lift must equal:", options: ["Drag", "Weight", "Thrust", "Centripetal force"], correct: 1, info: "To maintain altitude during the turn, the vertical component of lift must balance the aircraft's weight." },
 
-{ q: "Dynamic pressure is equal to:", options: ["ρV", "½ρV²", "ρ²V", "½V²"], correct: 1, info: "Dynamic pressure equals one-half multiplied by density multiplied by velocity squared." },
+{ q: "To maintain altitude during a banked turn, the pilot must generally:", options: ["Reduce lift", "Increase lift", "Reduce thrust", "Lower the landing gear"], correct: 1, info: "Because part of the lift is used to turn the aircraft, total lift must be increased to maintain altitude." },
 
-{ q: "If airspeed doubles, dynamic pressure becomes:", options: ["Twice as great", "Three times as great", "Four times as great", "Eight times as great"], correct: 2, info: "Dynamic pressure varies with the square of velocity." },
+{ q: "As bank angle increases during a level turn, the load factor will:", options: ["Decrease", "Remain constant", "Increase", "Become zero"], correct: 2, info: "Increasing bank angle requires more lift, which increases the load factor." },
 
-{ q: "The standard lift equation is:", options: ["Lift = CL × ½ρV²S", "Lift = CD × ½ρV²S", "Lift = Weight ÷ Drag", "Lift = Pressure × Weight"], correct: 0, info: "Lift is calculated using the lift coefficient, dynamic pressure and wing area." },
+{ q: "Load factor (n) is defined as:", options: ["Weight ÷ Lift", "Lift ÷ Weight", "Lift × Weight", "Drag ÷ Lift"], correct: 1, info: "Load factor is the ratio of lift to aircraft weight." },
 
-{ q: "The drag equation is:", options: ["Drag = CL × ½ρV²S", "Drag = CD × ½ρV²S", "Drag = Weight × Velocity", "Drag = Lift ÷ Area"], correct: 1, info: "Drag is calculated using the drag coefficient, dynamic pressure and wing area." },
+{ q: "Load factor is normally expressed in units of:", options: ["Pascals", "Knots", "g", "Metres per second"], correct: 2, info: "Load factor is expressed as multiples of gravitational acceleration (g)." },
 
-{ q: "Which variable in the lift equation represents wing area?", options: ["ρ", "S", "V", "CL"], correct: 1, info: "S represents the wing plan area." },
+{ q: "During straight and level unaccelerated flight, the aircraft experiences a load factor of:", options: ["0 g", "0.5 g", "1 g", "2 g"], correct: 2, info: "Lift equals weight in straight and level flight, producing a load factor of 1 g." },
 
-{ q: "Which variable represents air density?", options: ["ρ", "V", "CL", "CD"], correct: 0, info: "The Greek letter rho (ρ) represents air density." },
+{ q: "During a level turn at approximately 60° of bank, the load factor is closest to:", options: ["1.4 g", "1.7 g", "2 g", "3 g"], correct: 2, info: "A 60° level turn produces approximately 2 g." },
 
-{ q: "Which variable represents aircraft velocity?", options: ["S", "ρ", "V", "CL"], correct: 2, info: "V represents the aircraft's airspeed." },
+{ q: "Increasing load factor has what effect on the aircraft's stall speed?", options: ["It decreases", "It remains unchanged", "It increases", "It becomes zero"], correct: 2, info: "As load factor increases, the wing must generate more lift, causing the stall speed to increase." },
 
-{ q: "Lift varies directly with:", options: ["Velocity", "Velocity squared", "Weight squared", "Altitude"], correct: 1, info: "Lift varies with the square of airspeed." },
+{ q: "A steeply banked aircraft can stall at:", options: ["Only a low airspeed", "A much higher airspeed than in straight and level flight", "Only during landing", "Only with flaps extended"], correct: 1, info: "High load factors increase the stall speed, so an aircraft can stall at a much higher airspeed during a steep turn." },
 
-{ q: "Doubling the airspeed will approximately increase lift by:", options: ["2 times", "3 times", "4 times", "8 times"], correct: 2, info: "Lift is proportional to the square of velocity." },
+{ q: "The relationship between stall speed and load factor is approximately proportional to the:", options: ["Load factor", "Square root of the load factor", "Load factor squared", "Inverse of the load factor"], correct: 1, info: "Stall speed increases with the square root of the load factor." },
 
-{ q: "Increasing wing area will:", options: ["Reduce lift", "Increase lift", "Reduce drag only", "Reduce density"], correct: 1, info: "A larger wing area produces greater lift." },
+{ q: "A positive load factor exists when:", options: ["Lift acts downward relative to the aircraft", "The aerodynamic force acts upward relative to the aircraft", "The aircraft is inverted", "The engine thrust exceeds drag"], correct: 1, info: "Positive g occurs when the resultant aerodynamic force acts upward relative to the aircraft." },
 
-{ q: "Increasing air density will:", options: ["Decrease lift", "Increase lift", "Reduce thrust", "Reduce drag"], correct: 1, info: "Higher air density increases lift production." },
+{ q: "A negative load factor exists when:", options: ["The aerodynamic force acts downward relative to the aircraft", "The aircraft is climbing", "Lift equals weight", "Engine thrust is reduced"], correct: 0, info: "Negative g occurs when the aerodynamic force acts downward relative to the aircraft." },
 
-{ q: "The centre of pressure is the point through which:", options: ["Weight acts", "The resultant aerodynamic force acts", "Thrust acts", "Engine torque acts"], correct: 1, info: "The centre of pressure is where the resultant aerodynamic force acts." },
+{ q: "Aircraft structures are designed to withstand:", options: ["Only positive limit loads", "Only negative limit loads", "Both positive and negative limit loads", "Only landing loads"], correct: 2, info: "Certification requires aircraft structures to withstand both positive and negative loading." },
 
-{ q: "As angle of attack increases (before the stall), the centre of pressure generally:", options: ["Moves forward", "Moves aft", "Does not move", "Moves to the wingtip"], correct: 0, info: "The centre of pressure generally moves forward until the stall." },
+{ q: "Limit load is defined as:", options: ["The maximum load expected during normal service", "The load at which the structure fails", "1.5 times the maximum operating load", "The load experienced during take-off"], correct: 0, info: "Limit load is the greatest load expected during normal operation without permanent deformation." },
 
-{ q: "After the stall occurs, the centre of pressure:", options: ["Moves forward rapidly", "Moves rearwards", "Remains fixed", "Disappears"], correct: 1, info: "The centre of pressure moves aft once airflow separates." },
+{ q: "Ultimate load is normally equal to:", options: ["The limit load", "The limit load multiplied by 1.5", "Twice the limit load", "The maximum take-off weight"], correct: 1, info: "Ultimate load is normally 1.5 times the limit load unless otherwise specified." },
 
-{ q: "Movement of the centre of pressure affects:", options: ["Fuel flow only", "Pitching moment", "Cabin pressure", "Engine RPM"], correct: 1, info: "Changes in centre of pressure create pitching moments." },
+{ q: "Certification standards require an aircraft structure to withstand ultimate load for at least:", options: ["1 second", "2 seconds", "3 seconds", "10 seconds"], correct: 2, info: "CS-25 requires the structure to support ultimate loads for at least three seconds." },
 
-{ q: "The lift-to-drag ratio (L/D) is a measure of:", options: ["Engine efficiency", "Aerodynamic efficiency", "Fuel flow", "Structural strength"], correct: 1, info: "The lift-to-drag ratio indicates how efficiently an aerofoil produces lift." },
+{ q: "An aircraft structure should suffer no permanent deformation when subjected to:", options: ["Ultimate load", "Limit load", "Twice the ultimate load", "Maximum cruise speed"], correct: 1, info: "Limit loads must not produce detrimental permanent deformation." },
 
-{ q: "Maximum L/D ratio occurs when:", options: ["Lift equals drag", "The aircraft is at its most aerodynamically efficient angle of attack", "The aircraft stalls", "Flaps are fully extended"], correct: 1, info: "Maximum L/D occurs at the angle of attack producing the greatest lift for the least drag." },
+{ q: "Which of the following is an example of a dynamic load?", options: ["Fuel weight", "Fatigue loading from repeated stress cycles", "Static aircraft weight", "Cabin pressure only"], correct: 1, info: "Dynamic loads vary with time and include repeated fatigue loading caused by cyclic stresses." },
 
-{ q: "Deploying high-lift devices generally causes the L/D ratio to:", options: ["Increase", "Decrease", "Remain constant", "Become zero"], correct: 1, info: "Although lift increases, drag increases proportionally more, reducing the L/D ratio." },
+{ q: "The aircraft flight envelope is also commonly known as the:", options: ["Lift curve", "V-n diagram", "Drag polar", "Mach cone"], correct: 1, info: "The flight envelope is presented as a V-n diagram, plotting load factor against equivalent airspeed." },
 
-{ q: "Research has shown the maximum thickness of many efficient aerofoils occurs approximately:", options: ["At the leading edge", "One-third of the chord from the leading edge", "Halfway along the chord", "At the trailing edge"], correct: 1, info: "Many efficient aerofoils have maximum thickness around one-third of the chord behind the leading edge." },
+{ q: "The manoeuvring envelope plots:", options: ["Altitude against airspeed", "Load factor against equivalent airspeed", "Lift against drag", "Weight against altitude"], correct: 1, info: "The V-n diagram plots load factor (n) against equivalent airspeed (EAS)." },
 
-{ q: "Increasing angle of attack beyond CLmax causes:", options: ["More lift", "Flow separation and loss of lift", "Reduced drag", "Higher L/D ratio"], correct: 1, info: "Exceeding CLmax causes stall and a rapid reduction in lift." },
+{ q: "Exceeding the manoeuvring envelope may result in:", options: ["Improved climb performance", "Structural damage", "Reduced induced drag", "Lower stall speed"], correct: 1, info: "Operating outside the approved flight envelope can overstress the aircraft structure." },
 
-{ q: "The pitching moment generated by an aerofoil depends upon:", options: ["Only aircraft weight", "Only engine thrust", "The pitching moment coefficient (CM)", "Cabin pressure"], correct: 2, info: "The pitching moment coefficient determines the pitching tendency of the aerofoil." },
+{ q: "The manoeuvring speed (VA) is significant because:", options: ["It is the maximum cruise speed", "Below VA, full control deflection should stall the aircraft before structural damage occurs", "It is the maximum flap extension speed", "It is the speed for best glide"], correct: 1, info: "Below manoeuvring speed, the aircraft should stall before exceeding its structural limit load." },
 
-{ q: "The plan area used in lift calculations refers to:", options: ["Total aircraft surface area", "The wing area exposed to the airflow", "Only the upper wing surface", "The fuselage cross-sectional area"], correct: 1, info: "Lift calculations use the wing's planform area." },
+{ q: "Why are gust loads considered during aircraft certification?", options: ["They reduce lift", "Atmospheric turbulence imposes additional structural loads", "They reduce drag", "They increase engine thrust"], correct: 1, info: "Vertical gusts can significantly increase aerodynamic loading and must be considered during certification." },
 
-{ q: "Which of the following does NOT directly appear in the lift equation?", options: ["Wing area", "Lift coefficient", "Aircraft weight", "Air density"], correct: 2, info: "Aircraft weight determines the required lift but is not part of the lift equation." },
+{ q: "The primary purpose of the flight envelope is to:", options: ["Improve fuel economy", "Define the safe combinations of airspeed and load factor", "Calculate the centre of gravity", "Determine best climb speed"], correct: 1, info: "The flight envelope defines the aircraft's structural and aerodynamic operating limits." },
 
-{ q: "An increase in lift coefficient (CL) while all other variables remain constant will:", options: ["Decrease lift", "Increase lift", "Reduce drag only", "Reduce air density"], correct: 1, info: "Lift is directly proportional to the lift coefficient." },
+{ q: "Structural failure is most likely to occur if an aircraft:", options: ["Exceeds the ultimate load", "Flies below stall speed", "Descends at idle power", "Uses full flap"], correct: 0, info: "Ultimate load is the maximum load the structure is designed to withstand. Exceeding it may cause structural failure." },
 
-{ q: "Which aerodynamic coefficient primarily changes with angle of attack?", options: ["CL", "ρ", "Wing area", "Velocity"], correct: 0, info: "The lift coefficient changes significantly with angle of attack." },
+{ q: "Which certification specification defines the structural requirements referred to in these notes?", options: ["CS-23", "CS-25", "Part-66", "ICAO Annex 2"], correct: 1, info: "Transport-category aircraft structural requirements are defined in CS-25." },
 
-{ q: "During a steady glide, the aircraft is:", options: ["Accelerating", "In equilibrium", "Climbing", "Stalling"], correct: 1, info: "In a steady glide the aircraft is descending at a constant speed with balanced forces." },
+{ q: "Wing loading is defined as:", options: ["Lift divided by drag", "Aircraft weight divided by wing area", "Wing area divided by aircraft weight", "Lift divided by wing span"], correct: 1, info: "Wing loading equals aircraft weight divided by wing area." },
 
-{ q: "In a steady glide, the glide angle is primarily determined by the:", options: ["Aircraft weight", "Lift-to-drag ratio", "Engine power", "Fuel quantity"], correct: 1, info: "The glide angle depends on the lift-to-drag ratio (L/D)." },
+{ q: "An increase in aircraft weight generally causes wing loading to:", options: ["Decrease", "Increase", "Remain unchanged", "Become zero"], correct: 1, info: "If wing area remains constant, increasing aircraft weight increases wing loading." },
 
-{ q: "The tangent of the glide angle is equal to:", options: ["Lift / Drag", "Drag / Lift", "Weight / Lift", "Thrust / Drag"], correct: 1, info: "For gliding flight, tanγ = Drag ÷ Lift." },
+{ q: "What is the primary purpose of lift augmentation devices?", options: ["To increase maximum lift at low airspeeds", "To reduce aircraft weight", "To increase cruise speed", "To reduce engine thrust"], correct: 0, info: "Lift augmentation devices increase the maximum lift coefficient (CLmax), allowing safer take-off and landing at lower speeds." },
 
-{ q: "The greatest gliding range is achieved when:", options: ["Drag is maximum", "Lift-to-drag ratio is maximum", "Aircraft weight is highest", "Flaps are fully extended"], correct: 1, info: "Maximum range occurs at the maximum L/D ratio." },
+{ q: "Which type of flap consists of a simple hinged section at the trailing edge of the wing?", options: ["Split flap", "Slotted flap", "Plain flap", "Fowler flap"], correct: 2, info: "A plain flap is the simplest flap design, hinging downward from the trailing edge to increase camber." },
 
-{ q: "Increasing drag during a glide will:", options: ["Increase glide range", "Decrease glide range", "Increase lift", "Have no effect"], correct: 1, info: "Greater drag results in a steeper glide and shorter range." },
+{ q: "Compared with a plain flap, a split flap generally:", options: ["Produces less drag", "Produces greater drag with a moderate increase in lift", "Produces no increase in lift", "Is used only on supersonic aircraft"], correct: 1, info: "Split flaps generate a useful increase in lift but also create significantly more drag than plain flaps." },
 
-{ q: "Increasing lift during a glide will:", options: ["Reduce glide distance", "Increase glide distance", "Increase stall speed", "Increase drag only"], correct: 1, info: "Higher lift relative to drag improves glide range." },
+{ q: "The principal advantage of a slotted flap is that it:", options: ["Reduces aircraft weight", "Allows high-energy air to re-energise the boundary layer", "Eliminates induced drag", "Moves the centre of gravity forward"], correct: 1, info: "The slot allows high-energy air from beneath the wing to flow over the upper surface, delaying flow separation." },
 
-{ q: "The horizontal distance travelled during a glide is known as:", options: ["Glide slope", "Range", "Endurance", "Aspect ratio"], correct: 1, info: "Range is the horizontal distance covered before reaching the ground." },
+{ q: "Compared with a plain flap, a Fowler flap primarily increases:", options: ["Wing span only", "Wing area and wing camber", "Engine thrust", "Aspect ratio"], correct: 1, info: "A Fowler flap moves rearwards before deflecting, increasing both wing area and camber for a larger lift increase." },
 
-{ q: "Best glide performance occurs at:", options: ["Maximum drag", "Maximum lift-to-drag ratio", "Minimum thrust", "Maximum angle of attack"], correct: 1, info: "Maximum L/D provides the shallowest glide angle." },
+{ q: "Which trailing-edge flap generally produces the greatest increase in maximum lift coefficient?", options: ["Plain flap", "Split flap", "Fowler flap", "Trim flap"], correct: 2, info: "Fowler flaps provide one of the greatest increases in CLmax because they increase both wing area and camber." },
 
-{ q: "If an aircraft loses engine power, it can maintain constant speed by:", options: ["Climbing", "Gliding or diving", "Increasing thrust", "Reducing lift"], correct: 1, info: "Without sufficient thrust, constant speed can only be maintained by descending." },
+{ q: "The primary function of a leading-edge slat is to:", options: ["Increase engine cooling", "Delay airflow separation at high angles of attack", "Reduce wing loading", "Reduce parasite drag during cruise"], correct: 1, info: "Leading-edge slats improve airflow over the wing, delaying the stall and increasing CLmax." },
 
-{ q: "During a steady dive, thrust is:", options: ["Greater than drag", "Equal to drag", "Less than drag", "Equal to lift"], correct: 2, info: "A steady dive occurs when drag exceeds thrust." },
+{ q: "A fixed leading-edge slot differs from a movable slat because it:", options: ["Cannot increase CLmax", "Remains permanently open", "Is used only on helicopters", "Retracts automatically above stall speed"], correct: 1, info: "A fixed slot is always open, whereas a slat normally extends and retracts as required." },
 
-{ q: "In a steady climb, thrust must be:", options: ["Equal to drag", "Less than drag", "Greater than drag", "Equal to weight"], correct: 2, info: "Extra thrust is required to overcome drag and gain altitude." },
+{ q: "Deploying flaps during landing primarily allows the aircraft to:", options: ["Cruise faster", "Approach and land at a lower airspeed", "Reduce wing area", "Reduce engine fuel flow to zero"], correct: 1, info: "Flaps increase lift and drag, allowing a steeper, slower and more controlled approach." },
 
-{ q: "During a vertical climb at constant speed, thrust must exceed:", options: ["Lift only", "Weight plus drag", "Drag only", "Weight only"], correct: 1, info: "A vertical climb requires thrust greater than the sum of weight and drag." },
+{ q: "Why do lift augmentation devices increase drag as well as lift?", options: ["They increase wing loading", "They disturb the airflow and increase pressure drag while increasing camber", "They reduce the lift coefficient", "They decrease wing area"], correct: 1, info: "High-lift devices increase wing camber and often wing area, but they also increase pressure drag and skin-friction drag." },
 
-{ q: "In straight and level unaccelerated flight:", options: ["Lift exceeds weight", "Weight exceeds lift", "Lift equals weight", "Drag exceeds thrust"], correct: 2, info: "Lift balances weight in steady level flight." },
+{ q: "Blown flaps improve lift by:", options: ["Reducing wing area", "Directing high-energy engine bleed air over the flap surface", "Increasing aircraft mass", "Reducing engine thrust"], correct: 1, info: "Blown flaps use engine bleed air to re-energise the airflow over the flap, delaying boundary layer separation and increasing lift." },
 
-{ q: "In steady level flight:", options: ["Thrust exceeds drag", "Drag exceeds thrust", "Thrust equals drag", "Lift exceeds thrust"], correct: 2, info: "Steady flight requires thrust to balance drag." },
+{ q: "The engine bleed air used by blown flaps primarily serves to:", options: ["Reduce lift", "Delay boundary layer separation", "Increase stall speed", "Decrease wing area"], correct: 1, info: "High-energy air keeps the airflow attached to the flap surface for longer, increasing CLmax." },
 
-{ q: "Aircraft equilibrium requires:", options: ["Balanced forces only", "Balanced moments only", "Balanced forces and balanced moments", "Maximum lift"], correct: 2, info: "For stable steady flight both forces and moments must be balanced." },
+{ q: "Which leading-edge device increases wing camber by folding out from beneath the leading edge?", options: ["Krueger flap", "Split flap", "Spoiler", "Aileron"], correct: 0, info: "Krueger flaps deploy from the lower leading edge and are commonly fitted to swept-wing aircraft." },
 
-{ q: "The centre of gravity is the point through which:", options: ["Lift acts", "Weight acts", "Drag acts", "Thrust acts"], correct: 1, info: "Weight always acts through the aircraft's centre of gravity." },
+{ q: "Krueger flaps are most commonly fitted to:", options: ["Straight-wing light aircraft", "Swept-wing transport aircraft", "Helicopters", "Gliders"], correct: 1, info: "Krueger flaps are commonly used on swept-wing aircraft to improve low-speed lift." },
 
-{ q: "The centre of pressure is the point through which:", options: ["Weight acts", "Resultant aerodynamic force acts", "Engine thrust acts", "Fuel acts"], correct: 1, info: "Lift and drag combine into the aerodynamic force acting through the centre of pressure." },
+{ q: "When deployed, leading-edge slats create:", options: ["A spoiler", "A slot allowing high-energy airflow onto the upper surface", "A fuel vent", "A cooling duct"], correct: 1, info: "The slot allows high-energy air from below the wing to energise the boundary layer over the upper surface." },
 
-{ q: "As angle of attack changes, the centre of pressure:", options: ["Never moves", "Moves along the chord", "Moves to the wingtip", "Moves vertically"], correct: 1, info: "Changing pressure distribution moves the centre of pressure." },
+{ q: "The principal aerodynamic effect of leading-edge slats is to:", options: ["Reduce the maximum lift coefficient", "Increase the stalling angle of attack", "Reduce wing area", "Decrease profile drag during landing"], correct: 1, info: "Slats delay airflow separation, allowing the wing to reach a higher angle of attack before stalling." },
 
-{ q: "Why do aircraft require a tailplane?", options: ["To produce engine thrust", "To balance pitching moments", "To reduce fuel consumption", "To increase drag"], correct: 1, info: "The tailplane provides balancing moments for longitudinal stability." },
+{ q: "Automatic leading-edge slats normally deploy when:", options: ["The landing gear is selected down", "The angle of attack becomes sufficiently high", "Cruise altitude is reached", "The aircraft exceeds Mach 0.8"], correct: 1, info: "Automatic slats deploy in response to aerodynamic loads associated with a high angle of attack." },
 
-{ q: "The tailplane is located:", options: ["Ahead of the cockpit", "Behind the centre of gravity", "Inside the wing", "Below the fuselage"], correct: 1, info: "Being behind the CG gives the tailplane a large moment arm." },
+{ q: "Modern transport aircraft most commonly use which trailing-edge flap arrangement?", options: ["Plain flap", "Split flap", "Multi-slotted Fowler flap", "Single-slotted plain flap"], correct: 2, info: "Most large transport aircraft use multi-slotted Fowler flaps to maximise lift while maintaining controllability." },
 
-{ q: "The tailplane normally produces:", options: ["Only upward lift", "Only downward lift", "Either upward or downward aerodynamic force", "No aerodynamic force"], correct: 2, info: "Depending on flight conditions, the tailplane may produce upward or downward force." },
+{ q: "Boundary layer suction systems improve aerodynamic performance by:", options: ["Adding compressed air over the wing", "Removing low-energy air from the boundary layer", "Heating the leading edge", "Reducing wing loading"], correct: 1, info: "Boundary layer suction removes slow-moving air before separation occurs, helping the airflow remain attached." },
 
-{ q: "At high cruise speed, the tailplane commonly produces:", options: ["An upward force", "A downward force", "No force", "Maximum lift"], correct: 1, info: "The forward movement of the centre of pressure often requires a balancing downward tail force." },
+{ q: "Which statement best describes the purpose of vortex generators?", options: ["They reduce engine vibration", "They generate thrust", "They create small vortices that mix high-energy airflow into the boundary layer", "They reduce aircraft weight"], correct: 2, info: "Vortex generators energise the boundary layer, delaying separation and improving control at high angles of attack." },
 
-{ q: "Why is a symmetrical aerofoil often used for the tailplane?", options: ["To reduce manufacturing cost", "To produce lift in either direction", "To increase drag", "To improve fuel flow"], correct: 1, info: "A symmetrical section can produce upward or downward aerodynamic forces efficiently." },
+{ q: "At subsonic speeds, airflow is generally treated as:", options: ["Compressible", "Incompressible", "Supersonic", "Turbulent only"], correct: 1, info: "For low subsonic flight, compressibility effects are negligible, so the airflow is treated as incompressible." },
 
-{ q: "An all-moving tailplane differs from a conventional tailplane because:", options: ["Only the elevator moves", "The entire tailplane pivots", "It has no control surfaces", "It is fixed"], correct: 1, info: "An all-moving tailplane changes incidence by rotating the complete stabiliser." },
+{ q: "The total drag curve plotted against airspeed is best described as:", options: ["A straight line", "An inverted U-shape", "A U-shaped curve", "A constant value"], correct: 2, info: "Total drag decreases initially as induced drag falls, then increases as parasite drag rises, producing a U-shaped curve." },
 
-{ q: "An all-moving tailplane is especially useful because it:", options: ["Produces engine thrust", "Provides greater pitch authority", "Reduces lift", "Reduces wing area"], correct: 1, info: "Moving the entire surface provides greater pitching control." },
+{ q: "The optimum angle of attack for maximum lift-to-drag ratio is typically closest to:", options: ["3°–4°", "8°–10°", "12°–15°", "18°–20°"], correct: 0, info: "The notes identify the optimum angle of attack as approximately 3°–4° for best aerodynamic efficiency." },
 
-{ q: "Aircraft pitching moments arise because:", options: ["All aerodynamic forces act through the same point", "The major forces act at different locations", "Weight acts through the wingtip", "Drag acts vertically"], correct: 1, info: "Lift, drag, thrust and weight generally act through different points, creating moments." },
+{ q: "Compared with the wing root, induced drag at the wingtip is generally:", options: ["Higher", "Lower", "The same", "Zero"], correct: 0, info: "Wingtip vortices increase the induced drag experienced near the wingtip." },
 
-{ q: "The moment produced by a force depends upon:", options: ["Force only", "Distance only", "Force multiplied by distance", "Weight divided by lift"], correct: 2, info: "Moment equals force multiplied by the perpendicular distance from the pivot." },
+{ q: "Profile drag is approximately:", options: ["Inversely proportional to airspeed", "Independent of airspeed", "Directly proportional to increasing airspeed", "Proportional to aircraft weight only"], correct: 2, info: "Profile (parasite) drag increases as airspeed increases." },
 
-{ q: "The SI unit of moment is:", options: ["Newton", "Newton metre", "Pascal", "Joule"], correct: 1, info: "Moments are measured in Newton metres (Nm)." },
+{ q: "A shock stall most commonly occurs at:", options: ["High angle of attack and low speed", "Low angle of attack and high speed", "Only during landing", "Only during climbing flight"], correct: 1, info: "Shock stall is a high-speed phenomenon caused by shock-wave-induced airflow separation." },
 
-{ q: "For an aircraft to remain in trim:", options: ["Clockwise moments must exceed anticlockwise moments", "Anticlockwise moments must exceed clockwise moments", "Clockwise and anticlockwise moments must balance", "Lift must exceed drag"], correct: 2, info: "Trim exists when all pitching moments are in equilibrium." },
+{ q: "As angle of attack increases, the wing stagnation point generally:", options: ["Moves upward over the leading edge", "Moves downward beneath the leading edge", "Remains fixed", "Moves directly aft"], correct: 1, info: "Increasing angle of attack causes the stagnation point to move beneath the leading edge." },
 
-{ q: "A forward movement of the centre of gravity generally requires:", options: ["Less tailplane download", "More tailplane download", "Less lift", "Less drag"], correct: 1, info: "A forward CG increases the balancing moment required from the tailplane." },
+{ q: "Wing washout is achieved by:", options: ["Increasing incidence towards the wingtip", "Reducing incidence towards the wingtip", "Increasing wing thickness at the tip", "Reducing wing span"], correct: 1, info: "Washout twists the wing so that the wingtip has a lower angle of incidence than the wing root, encouraging root-first stall." },
 
-{ q: "Moving the centre of gravity aft generally:", options: ["Increases tailplane download", "Reduces tailplane download", "Increases induced drag", "Increases stall speed"], correct: 1, info: "An aft CG reduces the balancing force required from the tailplane." },
+{ q: "The point at which airflow changes from laminar to turbulent is called the:", options: ["Separation point", "Transition point", "Boundary point", "Stagnation point"], correct: 1, info: "The transition point marks where the boundary layer changes from laminar to turbulent flow." },
 
-{ q: "If the centre of pressure moves forward, the aircraft tends to:", options: ["Pitch nose-up", "Pitch nose-down", "Roll left", "Yaw right"], correct: 0, info: "A forward movement of the centre of pressure increases the nose-up pitching moment." },
-
-{ q: "If the centre of pressure moves rearward, the aircraft tends to:", options: ["Pitch nose-up", "Pitch nose-down", "Roll right", "Climb"], correct: 1, info: "A rearward centre of pressure generally creates a nose-down pitching tendency." },
-
-{ q: "What force keeps an aircraft following a curved path during a turn?", options: ["Centrifugal force", "Centripetal force", "Gravity", "Thrust"], correct: 1, info: "Centripetal force acts towards the centre of the turn and keeps the aircraft following a circular path." },
-
-{ q: "In a correctly balanced level turn, the horizontal component of lift provides:", options: ["Weight", "Thrust", "Centripetal force", "Drag"], correct: 2, info: "The horizontal component of lift provides the centripetal force required for turning." },
-
-{ q: "In a level turn, the vertical component of lift must equal:", options: ["Drag", "Weight", "Thrust", "Centripetal force"], correct: 1, info: "The vertical component of lift balances the aircraft's weight." },
-
-{ q: "To maintain altitude in a banked turn, the pilot must generally:", options: ["Reduce lift", "Increase lift", "Reduce thrust", "Lower the landing gear"], correct: 1, info: "Because some lift is used to turn the aircraft, total lift must be increased to maintain altitude." },
-
-{ q: "As the bank angle increases in level flight, load factor:", options: ["Decreases", "Remains constant", "Increases", "Becomes zero"], correct: 2, info: "Greater bank angles require more lift, increasing load factor." },
-
-{ q: "Load factor is defined as:", options: ["Weight ÷ Lift", "Lift ÷ Weight", "Drag ÷ Lift", "Lift × Weight"], correct: 1, info: "Load factor is the ratio of lift to aircraft weight." },
-
-{ q: "Load factor is normally expressed in:", options: ["Pascals", "Knots", "g", "Metres per second"], correct: 2, info: "Load factor is measured in multiples of gravitational acceleration (g)." },
-
-{ q: "In straight and level unaccelerated flight, the load factor is:", options: ["0 g", "0.5 g", "1 g", "2 g"], correct: 2, info: "Normal level flight produces a load factor of one." },
-
-{ q: "During a 60° level bank, the approximate load factor is:", options: ["1 g", "1.4 g", "2 g", "3 g"], correct: 2, info: "A 60° bank produces approximately 2 g." },
-
-{ q: "Increasing load factor causes stall speed to:", options: ["Decrease", "Remain constant", "Increase", "Become zero"], correct: 2, info: "Higher load factors require more lift, increasing stall speed." },
-
-{ q: "A steeply banked aircraft can stall at:", options: ["Only low speed", "A much higher airspeed than in level flight", "Only during landing", "Only with flaps extended"], correct: 1, info: "High load factors increase stall speed significantly." },
-
-{ q: "The relationship between stall speed and load factor is approximately proportional to:", options: ["Load factor", "Square root of load factor", "Load factor squared", "Inverse of load factor"], correct: 1, info: "Stall speed increases with the square root of the load factor." },
-
-{ q: "Positive load factor occurs when:", options: ["Lift acts downward", "Aerodynamic force acts upward", "The aircraft is inverted", "The engine stops"], correct: 1, info: "Positive g occurs when lift acts upward relative to the aircraft." },
-
-{ q: "Negative load factor occurs when:", options: ["Lift acts downward relative to the aircraft", "The engine produces no thrust", "The aircraft is climbing", "Drag exceeds thrust"], correct: 0, info: "Negative g results when aerodynamic force acts downward." },
-
-{ q: "Aircraft structures are designed to withstand:", options: ["Only positive loads", "Only negative loads", "Both positive and negative limit loads", "Only landing loads"], correct: 2, info: "Aircraft certification requires structures to withstand both positive and negative loads." },
-
-{ q: "Limit load is defined as:", options: ["The load expected during normal service", "The load at which the aircraft breaks", "Twice the aircraft weight", "The load during take-off only"], correct: 0, info: "Limit load is the maximum load expected during normal operation." },
-
-{ q: "Ultimate load is equal to:", options: ["Limit load", "Limit load × 1.5", "Limit load × 2", "Maximum take-off weight"], correct: 1, info: "Ultimate load is normally 1.5 times the limit load." },
-
-{ q: "An aircraft structure must withstand ultimate load for at least:", options: ["1 second", "2 seconds", "3 seconds", "10 seconds"], correct: 2, info: "Certification standards require ultimate loads to be sustained for at least three seconds." },
-
-{ q: "The aircraft structure should suffer no permanent deformation when subjected to:", options: ["Ultimate load", "Limit load", "Twice ultimate load", "Stall speed"], correct: 1, info: "Limit loads should not cause permanent structural deformation." },
-
-{ q: "Dynamic loads include:", options: ["Fuel weight", "Fatigue loads", "Passenger weight", "Static pressure"], correct: 1, info: "Repeated loading cycles produce fatigue damage." },
-
-{ q: "Fatigue damage is caused by:", options: ["Single overloads", "Repeated fluctuating stresses", "Static loading only", "Engine vibration only"], correct: 1, info: "Repeated loading can eventually produce fatigue cracks." },
-
-{ q: "The aircraft flight envelope is also known as the:", options: ["Lift curve", "V-n diagram", "Drag polar", "Mach cone"], correct: 1, info: "The V-n diagram shows the aircraft's operating limits." },
-
-{ q: "The flight envelope plots:", options: ["Altitude against speed", "Speed against weight", "Load factor against equivalent airspeed", "Lift against drag"], correct: 2, info: "The manoeuvring envelope plots load factor versus equivalent airspeed." },
-
-{ q: "Exceeding the manoeuvring envelope may result in:", options: ["Improved climb performance", "Structural damage", "Lower drag", "Reduced stall speed"], correct: 1, info: "Operating outside the envelope can overstress the airframe." },
-
-{ q: "The manoeuvring speed (VA) is significant because:", options: ["The aircraft cannot stall above it", "Full control inputs should stall the aircraft before structural damage occurs", "It is maximum cruise speed", "It is the speed for flap extension"], correct: 1, info: "Below VA, the aircraft should stall before structural limits are exceeded." },
-
-{ q: "Gust loads are considered during aircraft certification because:", options: ["They reduce lift", "Atmospheric turbulence produces additional structural loads", "They increase fuel flow", "They reduce drag"], correct: 1, info: "Vertical gusts increase aerodynamic loading on the aircraft." },
-
-{ q: "The primary purpose of the manoeuvring envelope is to:", options: ["Improve fuel economy", "Define safe combinations of speed and load factor", "Determine climb angle", "Calculate centre of gravity"], correct: 1, info: "The envelope defines the aircraft's structural operating limits." },
-
-{ q: "Structural failure is most likely if:", options: ["The aircraft exceeds ultimate load", "The aircraft flies below stall speed", "The aircraft is parked", "The engine is shut down"], correct: 0, info: "Loads beyond ultimate load may cause structural failure." },
-
-{ q: "Which certification specification defines many transport aircraft structural requirements?", options: ["CS-23", "CS-25", "Part-66", "ICAO Annex 2"], correct: 1, info: "Large transport aircraft are certified under CS-25." },
-
-{ q: "Increasing aircraft weight generally:", options: ["Reduces wing loading", "Increases wing loading", "Reduces stall speed", "Reduces induced drag"], correct: 1, info: "Wing loading increases as aircraft weight increases." },
-
-{ q: "Wing loading is defined as:", options: ["Lift divided by drag", "Aircraft weight divided by wing area", "Wing area divided by weight", "Drag divided by lift"], correct: 1, info: "Wing loading equals aircraft weight divided by wing area." },
-
-{ q: "A higher wing loading generally results in:", options: ["Lower stall speed", "Higher stall speed", "Lower landing speed", "Lower approach speed"], correct: 1, info: "Higher wing loading increases the speed required to generate sufficient lift." },
-
-{ q: "Which manoeuvre generally produces the highest positive load factor?", options: ["Straight and level cruise", "Steep level turn", "Taxiing", "Engine start"], correct: 1, info: "Steep level turns require significantly increased lift, producing higher load factors." },
-
-{ q: "The structural design of an aircraft must account for:", options: ["Only flight loads", "Only landing loads", "Flight, landing and gust loads", "Only engine loads"], correct: 2, info: "Certification considers all major operational loading conditions." },
-
-{ q: "What is the speed of sound?", options: ["The speed of an aircraft at Mach 1", "The speed at which a small pressure disturbance travels through a fluid", "The maximum speed of airflow over a wing", "The speed of engine exhaust gases"], correct: 1, info: "The speed of sound is the speed at which a very small pressure disturbance propagates through a fluid." },
-
-{ q: "The speed of sound primarily depends upon:", options: ["Air pressure", "Aircraft weight", "Air temperature", "Humidity"], correct: 2, info: "The speed of sound varies with the absolute temperature of the air." },
-
-{ q: "The local speed of sound increases as:", options: ["Altitude increases", "Temperature increases", "Pressure decreases", "Humidity decreases"], correct: 1, info: "Higher air temperatures produce a higher local speed of sound." },
-
-{ q: "At ISA sea level, the local speed of sound is approximately:", options: ["589 knots", "661 knots", "750 knots", "500 knots"], correct: 1, info: "Under ISA conditions at sea level the speed of sound is approximately 661 knots." },
-
-{ q: "At approximately 30,000 feet ISA, the local speed of sound is:", options: ["661 knots", "700 knots", "589 knots", "540 knots"], correct: 2, info: "Because temperature decreases with altitude, the speed of sound falls to approximately 589 knots at 30,000 ft." },
-
-{ q: "The speed of sound is proportional to:", options: ["Pressure", "The square root of absolute temperature", "Aircraft weight", "Humidity"], correct: 1, info: "The local speed of sound varies with the square root of the absolute temperature." },
-
-{ q: "Mach number is defined as:", options: ["IAS divided by TAS", "True Airspeed divided by Local Speed of Sound", "Lift divided by Drag", "Pressure divided by Density"], correct: 1, info: "Mach number is the ratio of TAS to the Local Speed of Sound." },
-
-{ q: "An aircraft flying at Mach 1 is travelling:", options: ["Twice the speed of sound", "Exactly the local speed of sound", "Half the speed of sound", "The speed of sound at sea level"], correct: 1, info: "Mach 1 represents the local speed of sound at the aircraft's altitude." },
-
-{ q: "Mach 0.5 represents:", options: ["Half the local speed of sound", "Half the sea-level speed of sound", "500 knots", "Twice the local speed of sound"], correct: 0, info: "Mach numbers are always referenced to the local speed of sound." },
-
-{ q: "Mach 2 represents:", options: ["Twice the local speed of sound", "Twice the sea-level speed of sound", "Two hundred knots", "Half the local speed of sound"], correct: 0, info: "Mach 2 is twice the local speed of sound." },
-
-{ q: "Subsonic flight is generally considered to occur below:", options: ["Mach 0.50", "Mach 0.75", "Mach 1.20", "Mach 2.00"], correct: 1, info: "Subsonic flow is generally below Mach 0.75." },
-
-{ q: "The transonic flight regime is approximately:", options: ["Mach 0.5 to 0.75", "Mach 0.75 to 1.20", "Mach 1.20 to 2.00", "Above Mach 5"], correct: 1, info: "Transonic flow occurs between approximately Mach 0.75 and Mach 1.2." },
-
-{ q: "Supersonic flight generally occurs between:", options: ["Mach 0.75–1.20", "Mach 1.20–5.00", "Mach 5–10", "Above Mach 10"], correct: 1, info: "Supersonic flight extends from approximately Mach 1.2 to Mach 5." },
-
-{ q: "Hypersonic flight occurs above:", options: ["Mach 2", "Mach 3", "Mach 5", "Mach 10"], correct: 2, info: "Hypersonic flight is generally defined as Mach numbers above 5." },
-
-{ q: "At low subsonic speeds, air may be treated as:", options: ["Highly compressible", "Incompressible", "Supersonic", "Vacuum"], correct: 1, info: "Compressibility effects are negligible at low subsonic speeds." },
-
-{ q: "Compressibility effects become significant when:", options: ["Flying below stall speed", "Approaching the speed of sound", "During taxiing", "At idle power"], correct: 1, info: "Compressibility becomes important as local airflow approaches Mach 1." },
-
-{ q: "As an aircraft approaches Mach 1, pressure waves:", options: ["Move far ahead of the aircraft", "Become increasingly compressed ahead of the aircraft", "Disappear completely", "Move behind the aircraft"], correct: 1, info: "Pressure waves accumulate because they cannot move away quickly enough." },
-
-{ q: "During subsonic flight, pressure disturbances:", options: ["Cannot travel ahead of the aircraft", "Travel ahead of the aircraft", "Travel only downward", "Remain stationary"], correct: 1, info: "In subsonic flight, sound waves travel ahead of the aircraft." },
-
-{ q: "The change in sound pitch heard as an aircraft passes is known as:", options: ["Bernoulli Effect", "Venturi Effect", "Doppler Effect", "Mach Effect"], correct: 2, info: "The Doppler Effect causes the apparent change in sound frequency." },
-
-{ q: "The Doppler Effect results from:", options: ["Lift generation", "Relative motion between the source and observer", "Compressibility only", "Wingtip vortices"], correct: 1, info: "The relative motion changes the observed frequency of sound." },
-
-{ q: "During transonic flight:", options: ["All airflow is subsonic", "All airflow is supersonic", "Both subsonic and supersonic airflow exist simultaneously", "No pressure waves exist"], correct: 2, info: "Some airflow around the aircraft becomes supersonic while other regions remain subsonic." },
-
-{ q: "The transonic region is considered difficult because:", options: ["Engine thrust disappears", "Compressibility produces major aerodynamic changes", "Lift doubles", "Drag disappears"], correct: 1, info: "Mixed airflow and shock waves create significant stability and control problems." },
-
-{ q: "Shock waves first begin to form when:", options: ["Aircraft exceeds Mach 2", "Local airflow reaches Mach 1", "Aircraft lands", "Flaps are extended"], correct: 1, info: "Shock waves appear wherever the local airflow first reaches the speed of sound." },
-
-{ q: "Compressibility primarily causes:", options: ["Reduced air density only", "Changes in pressure and density around the aircraft", "Reduced aircraft weight", "Reduced engine thrust"], correct: 1, info: "Compression changes both pressure and density, affecting airflow." },
-
-{ q: "Which flight regime experiences both subsonic and supersonic airflow over the wing?", options: ["Subsonic", "Transonic", "Supersonic", "Hypersonic"], correct: 1, info: "Mixed airflow exists only in the transonic region." },
-
-{ q: "When airflow becomes compressible, aerodynamic behaviour becomes:", options: ["More predictable", "Less affected by pressure changes", "More complex and difficult to predict", "Identical to low-speed flight"], correct: 2, info: "Compressibility introduces shock waves and significant aerodynamic changes." },
-
-{ q: "The local speed of sound decreases with altitude because:", options: ["Pressure decreases", "Temperature decreases", "Humidity decreases", "Density increases"], correct: 1, info: "The lower temperatures at altitude reduce the speed of sound." },
-
-{ q: "Mach number is particularly useful because:", options: ["It accounts for changing local speed of sound", "It measures engine power", "It measures wing loading", "It measures fuel efficiency"], correct: 0, info: "Mach number automatically relates aircraft speed to the local speed of sound." },
-
-{ q: "Which statement about Mach number is correct?", options: ["Mach number depends only on IAS", "Mach number depends on TAS and local temperature", "Mach number is constant with altitude", "Mach number measures lift"], correct: 1, info: "Since local speed of sound depends on temperature, Mach number changes with altitude and temperature." },
-
-{ q: "The greatest compressibility effects occur:", options: ["During taxi", "Near the speed of sound", "During landing rollout", "During engine shutdown"], correct: 1, info: "Compressibility becomes most significant as airflow approaches Mach 1." },
-
-{ q: "What is the Critical Mach Number (MCRIT)?", options: ["The aircraft speed at Mach 2", "The lowest free-stream Mach number at which local airflow first reaches Mach 1", "The maximum operating Mach number", "The Mach number at which the aircraft stalls"], correct: 1, info: "Critical Mach Number is the lowest free-stream Mach number that causes local airflow over part of the aircraft to reach Mach 1." },
-
-{ q: "Critical Mach Number is always:", options: ["Greater than Mach 1", "Less than Mach 1", "Exactly Mach 1", "Equal to Mach 2"], correct: 1, info: "The aircraft reaches its critical Mach number before the aircraft itself reaches Mach 1." },
-
-{ q: "Local Mach Number (ML) is:", options: ["The Mach number of airflow at a specific point around the aircraft", "The aircraft's indicated Mach number", "The maximum operating Mach", "The engine compressor speed"], correct: 0, info: "Local Mach Number refers to the Mach number at a particular location around the aircraft." },
-
-{ q: "Free Stream Mach Number (MFS) refers to:", options: ["The Mach number unaffected by the aircraft", "The Mach number inside the engine", "The Mach number at the wingtip", "The Mach number behind the aircraft"], correct: 0, info: "Free Stream Mach Number is measured in airflow unaffected by the aircraft." },
-
-{ q: "As aircraft speed approaches MCRIT:", options: ["Drag decreases", "Shock waves begin forming", "Lift doubles", "Compressibility disappears"], correct: 1, info: "The first local regions of airflow reach Mach 1, producing shock waves." },
-
-{ q: "Shock waves first appear where:", options: ["At the trailing edge", "Where local airflow first reaches Mach 1", "Inside the engine", "At the wingtip only"], correct: 1, info: "Shock waves form wherever local airflow becomes sonic." },
-
-{ q: "Why can local airflow exceed Mach 1 while the aircraft is still subsonic?", options: ["Air accelerates over the wing camber", "The engines accelerate the entire atmosphere", "The aircraft weight increases", "Static pressure disappears"], correct: 0, info: "Air accelerates over the upper wing surface, reaching Mach 1 before the aircraft does." },
-
-{ q: "Aircraft with thinner wings generally have:", options: ["Lower Critical Mach Numbers", "Higher Critical Mach Numbers", "No Critical Mach Number", "Higher stall speeds only"], correct: 1, info: "Thin wings delay local sonic airflow and therefore increase Critical Mach Number." },
-
-{ q: "The principal advantage of a supercritical wing is:", options: ["Lower landing speed", "Higher Critical Mach Number with reduced wave drag", "Greater engine thrust", "Lower aircraft weight"], correct: 1, info: "Supercritical aerofoils delay shock wave formation and reduce wave drag." },
-
-{ q: "Compressibility buffet is caused primarily by:", options: ["Fuel imbalance", "Boundary layer separation behind shock waves", "Engine vibration", "Landing gear extension"], correct: 1, info: "Shock-induced separation causes severe airframe vibration known as compressibility buffet." },
-
-{ q: "Compressibility buffet usually occurs:", options: ["Before reaching MCRIT", "Near or beyond MCRIT", "Only below stall speed", "Only during landing"], correct: 1, info: "Buffeting becomes significant as shock waves strengthen." },
-
-{ q: "Which of the following is NOT an adverse transonic effect?", options: ["Increase in drag", "Movement of the centre of pressure", "Decrease in lift", "Increase in fuel density"], correct: 3, info: "Fuel density is unrelated to transonic aerodynamic effects." },
-
-{ q: "Approaching MCRIT generally causes lift to:", options: ["Increase indefinitely", "Decrease after shock-induced separation begins", "Remain constant", "Become independent of angle of attack"], correct: 1, info: "Shock waves promote separation, reducing lift." },
-
-{ q: "Shock waves produce a rapid:", options: ["Decrease in pressure", "Increase in pressure", "Reduction in gravity", "Increase in humidity"], correct: 1, info: "Across a shock wave pressure rises abruptly while velocity decreases." },
-
-{ q: "Normal shock waves are:", options: ["Parallel to airflow", "Perpendicular to airflow", "Always at 45°", "Only found behind the aircraft"], correct: 1, info: "A normal shock stands approximately perpendicular to the airflow." },
-
-{ q: "A normal shock typically forms:", options: ["Ahead of a blunt body in supersonic flow", "At the wingtip only", "Inside the fuel tanks", "Only below Mach 0.5"], correct: 0, info: "Blunt bodies produce bow shocks ahead of them in supersonic flow." },
-
-{ q: "Across a normal shock, airflow velocity:", options: ["Increases", "Becomes supersonic", "Falls rapidly", "Remains unchanged"], correct: 2, info: "Velocity decreases abruptly while pressure, temperature and density increase." },
-
-{ q: "Behind a normal shock the airflow is generally:", options: ["Supersonic", "Subsonic", "Hypersonic", "Stationary"], correct: 1, info: "Normal shocks reduce airflow to subsonic speed." },
-
-{ q: "Oblique shocks occur when:", options: ["Supersonic airflow is turned through an angle", "The aircraft lands", "Lift equals weight", "Static pressure is zero"], correct: 0, info: "Deflecting supersonic airflow creates oblique shock waves." },
-
-{ q: "Compared with a normal shock, an oblique shock is generally:", options: ["Stronger", "Weaker", "Identical", "Stationary"], correct: 1, info: "Oblique shocks produce smaller losses than normal shocks." },
-
-{ q: "Expansion fans cause:", options: ["Pressure to increase", "Temperature to increase", "Pressure and density to decrease", "Lift to disappear"], correct: 2, info: "Expansion fans accelerate the airflow, reducing pressure, density and temperature." },
-
-{ q: "An expansion fan is essentially:", options: ["A normal shock", "An infinite number of Mach waves", "A propeller effect", "Wingtip turbulence"], correct: 1, info: "Expansion fans consist of many Mach waves spreading from a convex corner." },
-
-{ q: "Wave drag is primarily produced by:", options: ["Skin friction", "Shock wave formation", "Engine thrust", "Wing loading"], correct: 1, info: "Wave drag results from the energy losses associated with shock waves." },
-
-{ q: "Wave drag becomes significant:", options: ["At low subsonic speed", "Near Critical Mach Number", "During taxiing", "Only during descent"], correct: 1, info: "Wave drag rises sharply as shock waves develop." },
-
-{ q: "Wave drag consists mainly of:", options: ["Skin friction only", "Energy drag and boundary layer separation", "Induced drag only", "Interference drag only"], correct: 1, info: "Shock wave energy losses and separation both contribute to wave drag." },
-
-{ q: "The sudden increase in drag near MCRIT is known as:", options: ["Induced drag rise", "Wave drag rise", "Form drag rise", "Profile drag rise"], correct: 1, info: "Wave drag increases rapidly once shock waves appear." },
-
-{ q: "To reduce wave drag designers generally use:", options: ["Thicker wings", "Thin swept wings", "Greater camber", "Larger engines"], correct: 1, info: "Thin swept wings delay shock formation and reduce wave drag." },
-
-{ q: "As shock waves strengthen, the centre of pressure tends to:", options: ["Remain fixed", "Move rearwards", "Move vertically", "Move to the wingtip"], correct: 1, info: "Shock-induced pressure changes cause the centre of pressure to move aft." },
-
-{ q: "Rearward movement of the centre of pressure produces:", options: ["Mach tuck", "Dutch roll", "Wing drop", "P-factor"], correct: 0, info: "The aft movement creates a nose-down pitching moment known as Mach tuck." },
-
-{ q: "Mach tuck is characterised by:", options: ["A nose-up pitching moment", "A nose-down pitching moment", "Yaw oscillation", "Engine surge"], correct: 1, info: "Mach tuck is the tendency for the aircraft nose to pitch downward at high Mach numbers." },
-
-{ q: "If Mach tuck is left uncorrected it may:", options: ["Reduce airspeed automatically", "Cause further acceleration and control difficulties", "Lower stall speed", "Improve climb performance"], correct: 1, info: "The nose-down tendency can lead to increasing speed and greater compressibility effects." },
-
-{ q: "Which adverse effect resembles a high-speed stall?", options: ["Wave drag", "Shock stall", "Ground effect", "Dutch roll"], correct: 1, info: "Shock-induced separation can produce a high-speed stall known as shock stall." },
-
-{ q: "Shock stall occurs because:", options: ["Engine thrust is lost", "Shock-wave-induced separation destroys lift", "Weight suddenly increases", "The aircraft exceeds maximum altitude"], correct: 1, info: "Boundary layer separation behind the shock wave causes a rapid loss of lift." },
-
-{ q: "Aircraft operating close to MCRIT are normally limited by:", options: ["A maximum Mach operating limit", "Fuel quantity", "Landing gear speed", "Cabin pressure"], correct: 0, info: "Aircraft have a maximum operating Mach number to remain below unsafe compressibility effects." },
-
-{ q: "What is aerodynamic heating?", options: ["Heating produced by engine exhaust", "Heating caused by airflow friction and compression at high speed", "Heating from cabin pressurisation", "Heating caused by electrical systems"], correct: 1, info: "Aerodynamic heating is caused by friction and compression of the air at high speeds." },
-
-{ q: "Aerodynamic heating becomes most significant during:", options: ["Taxiing", "Supersonic flight", "Landing", "Engine start"], correct: 1, info: "Heating increases rapidly as aircraft enter the supersonic flight regime." },
-
-{ q: "Aircraft skin temperature increases approximately in proportion to:", options: ["Speed", "Speed squared", "Altitude", "Weight"], correct: 1, info: "Surface heating is approximately proportional to the square of the aircraft speed." },
-
-{ q: "Aerodynamic heating may cause aircraft structures to:", options: ["Become lighter", "Become brittle and develop thermal stresses", "Produce more lift", "Reduce drag"], correct: 1, info: "High temperatures can weaken materials and create thermal stress." },
-
-{ q: "The Whitcomb Area Rule is intended to reduce:", options: ["Induced drag", "Wave drag", "Skin friction drag", "Interference drag"], correct: 1, info: "The Whitcomb Area Rule reduces wave drag in the transonic region." },
-
-{ q: "The Area Rule states that:", options: ["Wing area should be maximised", "The aircraft's cross-sectional area should change smoothly along its length", "The fuselage should always be cylindrical", "Only the wing shape matters"], correct: 1, info: "Smooth changes in cross-sectional area minimise wave drag." },
-
-{ q: "The ideal body shape for minimum wave drag resembles a:", options: ["Cylinder", "Sphere", "Cigar pointed at both ends", "Cube"], correct: 2, info: "The Sears-Haack body is the ideal minimum wave-drag shape." },
-
-{ q: "Why do some high-speed aircraft have a 'wasp waist' fuselage?", options: ["To increase cabin space", "To satisfy the Area Rule", "To reduce weight only", "To increase fuel capacity"], correct: 1, info: "The narrowed fuselage compensates for the wing cross-section, maintaining a smooth area distribution." },
-
-{ q: "The Area Rule is most beneficial in which flight regime?", options: ["Low-speed flight", "Transonic flight", "Hovering", "Taxiing"], correct: 1, info: "Wave drag reduction is most important in the transonic range." },
-
-{ q: "Engine intakes on subsonic aircraft are designed so that airflow reaching the compressor is approximately:", options: ["Mach 0.5", "Mach 1.0", "Mach 2.0", "Mach 3.0"], correct: 0, info: "Compressor efficiency is greatest when inlet airflow is slowed to around Mach 0.5." },
-
-{ q: "Supersonic aircraft commonly require:", options: ["Fixed intake ducts only", "Variable geometry intakes", "No intake ducts", "Larger propellers"], correct: 1, info: "Variable geometry intakes control airflow entering the engine at different Mach numbers." },
-
-{ q: "The primary purpose of a variable geometry intake is to:", options: ["Increase cabin pressure", "Reduce supersonic airflow to subsonic speed before the compressor", "Increase fuel flow", "Reduce aircraft weight"], correct: 1, info: "Jet compressors require subsonic airflow for stable operation." },
-
-{ q: "A convergent intake duct is generally used during:", options: ["Low-speed taxiing", "Supersonic flight", "Landing only", "Engine shutdown"], correct: 1, info: "Convergent ducts help slow supersonic airflow." },
-
-{ q: "One method of slowing supersonic airflow entering an engine is by using:", options: ["Wing fences", "Shock waves", "Trailing-edge flaps", "Spoilers"], correct: 1, info: "Shock waves reduce airflow velocity before it reaches the compressor." },
-
-{ q: "Swept wings are primarily used to:", options: ["Reduce aircraft weight", "Delay compressibility effects", "Increase low-speed lift", "Reduce engine thrust"], correct: 1, info: "Sweepback delays shock-wave formation and raises the Critical Mach Number." },
-
-{ q: "The angle of sweep is conventionally measured along the:", options: ["Leading edge", "Trailing edge", "25% chord line", "Wingtip"], correct: 2, info: "Sweep angle is normally measured along the quarter-chord line." },
-
-{ q: "Increasing wing sweep generally:", options: ["Lowers Critical Mach Number", "Raises Critical Mach Number", "Eliminates drag", "Increases CLmax"], correct: 1, info: "Swept wings delay local sonic airflow." },
-
-{ q: "Sweepback reduces the severity of:", options: ["Ground effect", "Shock stall", "Dutch roll", "Propeller slipstream"], correct: 1, info: "Swept wings reduce the severity of shock-induced stall." },
-
-{ q: "The principal disadvantage of sweepback at low speed is:", options: ["Reduced CLmax", "Higher engine thrust", "Reduced drag", "Lower landing speed"], correct: 0, info: "Swept wings produce lower maximum lift coefficients." },
-
-{ q: "Compared with an unswept wing, a swept wing generally requires:", options: ["Lower landing speed", "Higher landing speed", "No high-lift devices", "Smaller wing area"], correct: 1, info: "Lower CLmax means higher landing speeds unless compensated by high-lift devices." },
-
-{ q: "Why are high-lift devices particularly important on swept-wing aircraft?", options: ["To increase engine thrust", "To recover lift lost through sweepback", "To reduce fuel consumption", "To reduce weight"], correct: 1, info: "Flaps and slats compensate for the reduced low-speed lift." },
-
-{ q: "Increasing sweepback generally causes induced drag to:", options: ["Decrease", "Increase", "Remain constant", "Become zero"], correct: 1, info: "Reduced CL requires a higher angle of attack, increasing induced drag." },
-
-{ q: "Shock waves on swept wings tend to be:", options: ["More severe", "Less severe", "Unchanged", "Impossible"], correct: 1, info: "Only the airflow component normal to the leading edge contributes to shock formation." },
-
-{ q: "The principal high-speed advantage of swept wings is:", options: ["Reduced landing distance", "Reduced wave drag", "Greater low-speed lift", "Reduced weight"], correct: 1, info: "Swept wings delay drag rise and reduce wave drag." },
-
-{ q: "One disadvantage of excessive sweepback is:", options: ["Reduced fuel capacity", "Premature wingtip stall", "Reduced drag", "Lower stall speed"], correct: 1, info: "Swept wings are more prone to tip stall and reduced aileron effectiveness." },
-
-{ q: "The Mach cone angle becomes:", options: ["Larger as Mach number increases", "Smaller as Mach number increases", "Constant at all Mach numbers", "Independent of speed"], correct: 1, info: "As Mach number increases, the Mach cone becomes narrower." },
-
-{ q: "Coffin Corner occurs because:", options: ["The stall speed and critical Mach speed converge at high altitude", "Engine thrust becomes unlimited", "Drag disappears", "The aircraft becomes lighter"], correct: 0, info: "At high altitude the low-speed stall boundary and high-speed Mach boundary move closer together." },
-
-{ q: "At Coffin Corner, the available speed margin between stall and Mach buffet is:", options: ["Very large", "Very small", "Exactly 100 knots", "Independent of altitude"], correct: 1, info: "Only a narrow safe speed band exists." },
-
-{ q: "Which aircraft are most susceptible to Coffin Corner?", options: ["Training aircraft", "High-altitude jet aircraft", "Helicopters", "Gliders"], correct: 1, info: "High-altitude jet aircraft operate close to both aerodynamic limits." },
-
-{ q: "Flying beyond Coffin Corner may result in:", options: ["Only increased fuel burn", "Either an aerodynamic stall or Mach buffet", "Reduced drag", "Improved climb performance"], correct: 1, info: "The aircraft can encounter either low-speed stall or high-speed compressibility effects." },
-
-{ q: "The overall purpose of swept wings, area rule and supercritical aerofoils is to:", options: ["Improve low-speed lift only", "Reduce transonic drag and delay compressibility effects", "Increase aircraft weight", "Reduce landing distance only"], correct: 1, info: "These design features improve efficiency in the transonic flight regime." },
-
-{ q: "According to the ISA, what is the standard sea-level air density?", options: ["1.000 kg/m³", "1.125 kg/m³", "1.225 kg/m³", "1.325 kg/m³"], correct: 2, info: "ISA sea-level density is 1.225 kg/m³." },
-
-{ q: "Which gas law states that pressure is inversely proportional to volume when temperature remains constant?", options: ["Charles' Law", "Boyle's Law", "Gay-Lussac's Law", "Avogadro's Law"], correct: 1, info: "Boyle's Law states P is inversely proportional to V at constant temperature." },
-
-{ q: "Charles' Law states that at constant pressure:", options: ["Pressure is proportional to volume", "Volume is proportional to absolute temperature", "Density is proportional to pressure", "Pressure is proportional to temperature"], correct: 1, info: "Charles' Law relates volume directly to absolute temperature." },
-
-{ q: "Gay-Lussac's Law states that at constant volume:", options: ["Pressure is proportional to absolute temperature", "Volume is proportional to pressure", "Density is proportional to temperature", "Pressure is inversely proportional to temperature"], correct: 0, info: "Pressure varies directly with absolute temperature when volume is constant." },
-
-{ q: "ISA temperatures are measured using which temperature scale in aerodynamic equations?", options: ["Celsius", "Kelvin", "Fahrenheit", "Rankine"], correct: 1, info: "Absolute temperature in Kelvin is used in aerodynamic calculations." },
-
-{ q: "If the absolute temperature doubles, the local speed of sound increases by approximately:", options: ["2 times", "1.41 times", "4 times", "0.5 times"], correct: 1, info: "Speed of sound varies with the square root of absolute temperature." },
-
-{ q: "Density ratio (σ) is defined as:", options: ["Pressure ÷ Density", "Density at altitude ÷ ISA sea-level density", "Altitude ÷ Density", "Temperature ÷ Pressure"], correct: 1, info: "Density ratio compares local density with standard sea-level density." },
-
-{ q: "A reduction in air density primarily reduces:", options: ["Engine oil pressure", "Lift generated at a given airspeed", "Aircraft weight", "Wing area"], correct: 1, info: "Lower density means fewer air molecules are available to generate lift." },
-
-{ q: "Which ISA property remains constant throughout the tropopause?", options: ["Pressure", "Temperature", "Density", "Humidity"], correct: 1, info: "Temperature remains constant throughout the ISA tropopause." },
-
-{ q: "Pressure decreases with altitude because:", options: ["Gravity becomes stronger", "There is less air above compressing the atmosphere below", "Density increases", "Humidity decreases"], correct: 1, info: "Higher altitude means less overlying air and therefore lower pressure." },
-
-{ q: "At a constant indicated airspeed, a reduction in air density requires the aircraft to fly at:", options: ["Lower TAS", "Higher TAS", "Lower Mach number", "Lower altitude"], correct: 1, info: "For the same IAS, TAS increases as density decreases." },
-
-{ q: "Which atmospheric property directly influences both lift generation and engine performance?", options: ["Humidity only", "Air density", "Wind direction", "Cloud cover"], correct: 1, info: "Density affects both aerodynamic lift and engine mass airflow." },
-
-{ q: "Using the lift equation, if wing area is doubled while all other variables remain constant, lift will:", options: ["Halve", "Double", "Triple", "Remain unchanged"], correct: 1, info: "Lift is directly proportional to wing area." },
-
-{ q: "If air density decreases by 20% while all other variables remain constant, lift will:", options: ["Increase by 20%", "Decrease by 20%", "Decrease by 40%", "Remain unchanged"], correct: 1, info: "Lift varies directly with air density." },
-
-{ q: "Which variable has the greatest mathematical influence on lift?", options: ["Wing Area", "Velocity", "Air Density", "Lift Coefficient"], correct: 1, info: "Velocity is squared in the lift equation." },
-
-{ q: "An aircraft increases airspeed by 10%. Approximately how much does dynamic pressure increase?", options: ["10%", "21%", "50%", "100%"], correct: 1, info: "Dynamic pressure varies with V². 1.1² ≈ 1.21." },
-
-{ q: "If CL doubles while all other variables remain constant:", options: ["Lift doubles", "Lift quadruples", "Drag becomes zero", "Dynamic pressure doubles"], correct: 0, info: "Lift is directly proportional to CL." },
-
-{ q: "Which variable does NOT appear in the drag equation?", options: ["CD", "Wing Area", "Aircraft Weight", "Air Density"], correct: 2, info: "Aircraft weight affects required lift but is not part of the drag equation." },
-
-{ q: "The lift equation demonstrates that increasing both airspeed and CL simultaneously will:", options: ["Always reduce drag", "Produce substantially greater lift", "Reduce dynamic pressure", "Reduce induced drag to zero"], correct: 1, info: "Lift increases with both CL and V²." },
-
-{ q: "An aircraft enters icing conditions and the wing surface becomes rough. Which drag component increases first?", options: ["Induced drag", "Skin friction drag", "Wave drag", "Compressibility drag"], correct: 1, info: "Surface roughness primarily increases skin friction drag." },
-
-{ q: "Following heavy insect contamination of the leading edge, the aircraft is most likely to experience:", options: ["Delayed boundary layer separation", "Earlier airflow separation", "Reduced induced drag", "Lower stall speed"], correct: 1, info: "Leading-edge contamination encourages premature separation and increases stall speed." },
-
-{ q: "During a steep climbing turn, which aerodynamic change occurs first?", options: ["Load factor decreases", "Angle of attack usually increases", "Induced drag decreases", "Wing loading decreases"], correct: 1, info: "Greater lift demand requires an increased angle of attack." },
-
-{ q: "A pilot maintains altitude while reducing airspeed. Which drag component becomes increasingly dominant?", options: ["Wave drag", "Interference drag", "Induced drag", "Form drag"], correct: 2, info: "Lower speed requires higher angle of attack, increasing induced drag." },
-
-{ q: "Which combination would produce the highest induced drag?", options: ["High speed, low angle of attack", "Low speed, high lift coefficient", "Cruise flight", "High altitude descent"], correct: 1, info: "High lift coefficient produces the strongest wingtip vortices." },
-
-{ q: "A transport aircraft is approaching its service ceiling. Which aerodynamic hazard becomes increasingly important?", options: ["Ground effect", "Coffin Corner", "Propeller slipstream", "P-factor"], correct: 1, info: "At high altitude the stall speed and critical Mach speed converge." },
-
-{ q: "A laminar boundary layer is most likely to separate because it:", options: ["Contains more kinetic energy", "Has lower skin friction but less energy to overcome an adverse pressure gradient", "Produces greater lift", "Is thicker than a turbulent boundary layer"], correct: 1, info: "Laminar flow has less energy and therefore separates more easily." },
-
-{ q: "Why is a turbulent boundary layer often deliberately encouraged on transport aircraft?", options: ["It eliminates drag", "It delays boundary layer separation", "It reduces aircraft weight", "It decreases lift"], correct: 1, info: "The additional energy in turbulent flow allows it to remain attached for longer." },
-
-{ q: "An adverse pressure gradient exists when static pressure:", options: ["Continuously decreases along the airflow", "Increases in the direction of airflow", "Remains constant", "Equals dynamic pressure"], correct: 1, info: "Increasing pressure slows the airflow and encourages separation." },
-
-{ q: "Which region of an aerofoil normally experiences the greatest adverse pressure gradient?", options: ["Immediately behind the leading edge", "Near the trailing edge", "Wing tip", "Wing root"], correct: 1, info: "Pressure recovery occurs towards the trailing edge." },
-
-{ q: "Which maintenance defect is most likely to increase the risk of boundary layer separation?", options: ["Smooth polished paint", "Ice contamination on the leading edge", "New static wick installation", "Clean wing surface"], correct: 1, info: "Leading-edge contamination disturbs airflow before it reaches the critical upper surface." },
-
-{ q: "Flow reversal within the boundary layer is an indication that:", options: ["Lift has increased", "Boundary layer separation has begun", "The aircraft has entered transonic flight", "Dynamic pressure has increased"], correct: 1, info: "Flow reversal is one of the defining characteristics of separation." },
-
-{ q: "The boundary layer thickness generally increases because:", options: ["Air density decreases", "Progressively more airflow is slowed by friction", "Wing loading increases", "Static pressure becomes constant"], correct: 1, info: "Viscous effects accumulate as airflow moves aft." },
-
-{ q: "Which device energises the boundary layer without using engine bleed air?", options: ["Blown flap", "Vortex generator", "Kruger flap", "Spoiler"], correct: 1, info: "Vortex generators mix high-energy airflow into the boundary layer." },
-
-{ q: "An aircraft's weight increases by 20% while maintaining the same altitude and airspeed. Assuming wing area and air density remain constant, which aerodynamic quantity must increase?", options: ["Lift coefficient", "Dynamic pressure", "Wing area", "Air density"], correct: 0, info: "Additional lift must be produced by increasing the lift coefficient, normally by increasing angle of attack." },
-
-{ q: "An aircraft flies from cold air into much warmer air while maintaining the same True Airspeed. The Mach number will:", options: ["Increase", "Decrease", "Remain unchanged", "Double"], correct: 1, info: "Higher temperature increases the local speed of sound, reducing Mach number." },
-
-{ q: "Which flight condition produces the greatest lift coefficient?", options: ["Cruise at Mach 0.78", "Best glide", "Immediately before the stall", "Maximum operating speed"], correct: 2, info: "CL reaches its maximum value immediately before the wing stalls." },
-
-{ q: "Which combination produces the smallest induced drag?", options: ["Low speed and heavy weight", "High speed with low angle of attack", "High lift coefficient", "Steep climbing turn"], correct: 1, info: "Higher speed requires a lower angle of attack, reducing induced drag." },
-
-{ q: "During descent at constant IAS, induced drag generally:", options: ["Increases significantly", "Decreases because less lift is required", "Remains constant", "Becomes greater than parasite drag"], correct: 1, info: "Reduced lift demand reduces induced drag." },
-
-{ q: "A pilot extends flaps fully during cruise. Which statement is most accurate?", options: ["Lift increases with little drag penalty", "Lift increases but drag increases substantially", "Lift decreases while drag decreases", "Only induced drag changes"], correct: 1, info: "High-lift devices produce significant drag in addition to increased lift." },
-
-{ q: "During a steady glide, increasing aircraft weight while maintaining the optimum lift-to-drag ratio will:", options: ["Increase glide angle", "Decrease glide range", "Leave the glide angle approximately unchanged but increase glide speed", "Double the glide range"], correct: 2, info: "A heavier aircraft glides faster at the same L/D but the glide angle remains essentially unchanged." },
-
-{ q: "The best glide angle corresponds to:", options: ["Maximum lift coefficient", "Maximum lift-to-drag ratio", "Minimum drag coefficient", "Minimum angle of attack"], correct: 1, info: "Best glide performance occurs at maximum L/D." },
-
-{ q: "In a vertical climb at constant speed, lift is:", options: ["Equal to weight", "Greater than weight", "Approximately zero", "Equal to drag"], correct: 2, info: "In a true vertical climb, lift contributes little or nothing to supporting the aircraft." },
-
-{ q: "The primary reason the tailplane has a comparatively small surface area is:", options: ["It produces no lift", "Its long moment arm provides large leverage", "It operates at higher pressure", "It only functions during landing"], correct: 1, info: "Moment equals force × distance, allowing a smaller force to produce the required balancing moment." },
-
-{ q: "Moving the centre of gravity aft generally makes the aircraft:", options: ["More longitudinally stable", "Less longitudinally stable", "Unable to climb", "Unable to stall"], correct: 1, info: "An aft CG reduces the restoring pitching moment and decreases longitudinal stability." }
+{ q: "The primary benefit of a turbulent boundary layer compared with a laminar boundary layer is that it:", options: ["Produces less drag at all speeds", "Delays airflow separation by containing more energy", "Reduces aircraft weight", "Eliminates induced drag"], correct: 1, info: "Although it has higher skin-friction drag, a turbulent boundary layer resists adverse pressure gradients more effectively and delays separation." }
 
 ];
 
