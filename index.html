@@ -198,6 +198,168 @@
    
     const allQuestions = [
         
+    //Atmosphere and ISA
+
+    { q: "The International Standard Atmosphere (ISA) is based on atmospheric conditions representative of approximately:", options: ["The Equator", "45° North latitude", "The North Pole", "The Tropic of Cancer"], correct: 1, info: "The ISA is a hypothetical atmosphere based on average conditions at approximately 45° latitude and is used for aircraft performance calculations and instrument calibration." },
+
+    { q: "Atmospheric pressure decreases with altitude because:", options: ["Gravity becomes stronger", "There is less air above compressing the atmosphere below", "Air temperature always increases", "Humidity decreases"], correct: 1, info: "Pressure decreases because the weight of the air above reduces with altitude, resulting in less compression of the air below." },
+
+    { q: "At approximately what altitude is atmospheric pressure about half its sea-level value under ISA conditions?", options: ["8,000 ft", "12,000 ft", "18,000 ft", "24,000 ft"], correct: 2, info: "A useful aviation reference is that atmospheric pressure is approximately half of sea-level pressure at 18,000 ft under ISA conditions." },
+
+    { q: "If a pressure gauge reads 25 psi gauge pressure at sea level, what is the approximate absolute pressure?", options: ["10.3 psi", "25.0 psi", "39.7 psi", "43.8 psi"], correct: 2, info: "Absolute pressure equals gauge pressure plus atmospheric pressure. At sea level: 25 + 14.7 ≈ 39.7 psi." },
+
+    { q: "As outside air temperature decreases, the service ceiling of an aircraft generally:", options: ["Decreases", "Increases", "Remains unchanged", "Depends only on aircraft weight"], correct: 1, info: "Colder air is denser, improving both lift and engine performance, allowing a higher service ceiling." },
+
+    { q: "The indicated airspeed at which an aircraft stalls is, for practical purposes:", options: ["Higher at altitude", "Lower at altitude", "Approximately constant with altitude", "Directly proportional to air density"], correct: 2, info: "Although the true airspeed at the stall increases with altitude, the indicated stall speed remains approximately constant." },
+
+    { q: "Which statement correctly defines relative humidity?", options: ["The mass of water vapour per cubic metre of air", "The ratio of the water vapour present to the maximum the air can hold at that temperature", "The temperature at which condensation begins", "The total amount of moisture condensed from the atmosphere"], correct: 1, info: "Relative humidity compares the actual water vapour content with the maximum possible at the same temperature." },
+
+    { q: "Absolute humidity is best defined as:", options: ["The ratio of water vapour present to saturation", "The temperature at which condensation begins", "The actual mass of water vapour contained in a given volume of air", "The amount of rainfall in the atmosphere"], correct: 2, info: "Absolute humidity is the actual quantity of water vapour contained in a given volume of air. This corrects an error in the original source document." },
+
+    { q: "The dew point is defined as:", options: ["The freezing point of water vapour", "The temperature at which humid air becomes saturated when cooled at constant pressure", "The temperature at which relative humidity becomes zero", "The ISA sea-level temperature"], correct: 1, info: "When air is cooled to its dew point, condensation begins because the air has become saturated." },
+
+    { q: "The speed of sound in the atmosphere is primarily affected by:", options: ["Atmospheric pressure", "Air density", "Air temperature", "Relative humidity"], correct: 2, info: "The speed of sound depends almost entirely on absolute air temperature and is independent of pressure for practical aviation purposes." },
+
+    //Atmosphere, Altimetry and Gas Laws
+
+    { q: "Standard atmospheric pressure at mean sea level under ISA conditions is approximately:", options: ["760 mmHg, 1013.25 hPa and 14.7 psi", "700 mmHg, 1000 hPa and 15.0 psi", "760 mmHg, 980 hPa and 14.7 psi", "1013 mmHg, 760 psi and 29.92 hPa"], correct: 0, info: "ISA standard pressure is 1013.25 hPa (mb), equivalent to 760 mmHg, 29.92 inHg and approximately 14.7 psi." },
+
+    { q: "Which instrument directly measures atmospheric pressure using a column of mercury?", options: ["Aneroid altimeter", "Mercury barometer", "Pitot tube", "Vertical speed indicator"], correct: 1, info: "A mercury barometer measures atmospheric pressure by balancing it against the height of a mercury column." },
+
+    { q: "QNH is the altimeter setting that causes the instrument to indicate:", options: ["Zero on the airfield", "Height above the runway", "Aerodrome elevation above mean sea level while on the ground", "Flight Level 000"], correct: 2, info: "QNH is sea-level pressure reduced from the station pressure so that the altimeter reads the aerodrome elevation when on the ground." },
+
+    { q: "QNE is obtained by setting the altimeter to:", options: ["The current aerodrome pressure", "1013.25 hPa (29.92 inHg)", "The local QNH", "Zero feet"], correct: 1, info: "QNE is the standard pressure setting of 1013.25 hPa used when flying Flight Levels." },
+
+    { q: "Which of the following correctly identifies the three principal ICAO pressure settings?", options: ["QFE, QNH and QNE", "QEF, QNH and QEN", "QNE, QNF and QFH", "QFF, QNE and QFG"], correct: 0, info: "The standard ICAO pressure settings are QFE, QNH and QNE." },
+
+    { q: "Boyle's Law states that for a fixed mass of gas at constant temperature:", options: ["Pressure is directly proportional to volume", "Pressure is inversely proportional to volume", "Volume is directly proportional to absolute temperature", "Pressure is directly proportional to absolute temperature"], correct: 1, info: "Boyle's Law states that PV = constant when temperature remains constant." },
+
+    { q: "According to Charles' Law, if the absolute temperature of a gas increases while pressure remains constant, the volume will:", options: ["Decrease", "Remain constant", "Increase", "Become independent of pressure"], correct: 2, info: "Charles' Law states that volume is directly proportional to absolute temperature at constant pressure." },
+
+    { q: "According to the Pressure Law (Gay-Lussac's Law), if the temperature of a fixed volume of gas increases, the pressure will:", options: ["Decrease", "Remain constant", "Increase in direct proportion to absolute temperature", "Increase only if the density changes"], correct: 2, info: "For a constant volume, pressure is directly proportional to absolute temperature." },
+
+    { q: "The combined gas law is commonly expressed as:", options: ["PV = constant", "P/T = constant", "PV/T = constant", "Pρ/T = constant"], correct: 2, info: "The combined gas law relates pressure, volume and absolute temperature: PV/T = constant." },
+
+    { q: "The tropopause is best defined as the:", options: ["Layer where temperature decreases most rapidly", "Boundary between the troposphere and the stratosphere", "Region where atmospheric pressure becomes zero", "Upper limit of the ionosphere"], correct: 1, info: "The tropopause separates the troposphere from the stratosphere and is located at approximately 36,000 ft (11 km) in the ISA." },
+
+    //Stability and Aircraft Balance
+   
+    { q: "Aircraft stability is best defined as the:", options: ["Ability to change direction rapidly", "Tendency to return to its original trimmed flight condition after a disturbance", "Ability to fly at maximum speed", "Capability of producing lift"], correct: 1, info: "Stability is the tendency of an aircraft to return towards its original equilibrium after being disturbed." },
+
+    { q: "An aircraft is said to possess static stability if, after a disturbance:", options: ["It immediately returns to equilibrium", "It initially tends to return towards its original position", "It oscillates with constant amplitude", "It continues moving away from equilibrium"], correct: 1, info: "Static stability refers only to the initial tendency to return towards equilibrium after the disturbing force is removed." },
+    
+    { q: "Dynamic stability is demonstrated when an aircraft:", options: ["Returns to equilibrium with progressively decreasing oscillations", "Returns instantly without oscillation", "Maintains constant oscillations indefinitely", "Continues diverging from equilibrium"], correct: 0, info: "Dynamic stability describes how the aircraft behaves over time after the initial disturbance." },
+    
+    { q: "An aircraft that oscillates with constant amplitude following a disturbance is said to have:", options: ["Positive dynamic stability", "Neutral dynamic stability", "Negative static stability", "Directional instability"], correct: 1, info: "Constant-amplitude oscillations indicate neutral dynamic stability." },
+    
+    { q: "Which statement correctly describes a dynamically unstable aircraft?", options: ["Oscillations decrease with time", "Oscillations remain constant", "Oscillations increase with time", "The aircraft immediately returns to equilibrium"], correct: 2, info: "Increasing oscillations indicate dynamic instability, even if the aircraft is statically stable." },
+    
+    { q: "Which aircraft component provides the greatest contribution to longitudinal stability?", options: ["Vertical stabiliser", "Wing dihedral", "Horizontal tailplane", "Ailerons"], correct: 2, info: "The horizontal tailplane provides the restoring pitching moment required for longitudinal stability." },
+    
+    { q: "The pendulum effect of a high-wing aircraft primarily increases:", options: ["Directional stability", "Longitudinal stability", "Lateral stability", "Spiral instability"], correct: 2, info: "Because the fuselage hangs below the wing, a high-wing aircraft gains additional lateral stability from the pendulum effect." },
+    
+    { q: "Wing sweep contributes to lateral stability because a sideslip causes:", options: ["The retreating wing to generate more lift", "The advancing wing to experience a higher effective aspect ratio and produce more lift", "Both wings to produce identical lift", "The aircraft to lose directional stability"], correct: 1, info: "During a sideslip, the advancing swept wing experiences a higher effective aspect ratio and generates more lift, helping to level the aircraft." },
+    
+    { q: "Moving the centre of gravity towards its aft limit generally makes an aircraft:", options: ["More longitudinally stable", "Less longitudinally stable", "More directionally stable", "Immune to stalls"], correct: 1, info: "An aft CG reduces the restoring pitching moment, making the aircraft less longitudinally stable and more difficult to recover from disturbances." },
+    
+    { q: "A yaw damper is primarily installed to:", options: ["Increase roll rate", "Prevent Dutch Roll by automatically correcting yaw oscillations", "Reduce elevator forces", "Control pitch trim at high Mach numbers"], correct: 1, info: "Yaw dampers automatically apply rudder inputs to damp out yaw oscillations and prevent Dutch Roll." },
+
+
+    //Flight Mechanics and Stability
+
+    { q: "Moving the aircraft's centre of gravity forward will generally:", options: ["Increase longitudinal stability but require greater tailplane download", "Reduce longitudinal stability and reduce tailplane download", "Have no effect on stability", "Eliminate the need for elevator trim"], correct: 0, info: "A forward CG increases longitudinal stability but requires the tailplane to produce a greater downward force, increasing wing loading and stall speed." },
+
+    { q: "An aircraft with an aft centre of gravity is more likely to:", options: ["Require greater elevator force during flare", "Recover more easily from a stall", "Experience reduced longitudinal stability and more difficult stall recovery", "Have a lower cruise speed due to increased drag"], correct: 2, info: "An aft CG reduces the restoring moment provided by the tailplane, making the aircraft less stable and reducing natural stall recovery characteristics." },
+    
+    { q: "In a coordinated turn, the lift vector is:", options: ["Always vertical", "Inclined towards the centre of the turn", "Parallel to the aircraft fuselage", "Directed opposite to the turn"], correct: 1, info: "When the aircraft banks, the lift vector tilts. Its horizontal component provides the centripetal force required for the turn." },
+    
+    { q: "If bank angle is increased while maintaining altitude, the pilot must:", options: ["Decrease angle of attack", "Increase lift by increasing angle of attack or airspeed", "Reduce thrust to maintain balance", "Lower the landing gear"], correct: 1, info: "As bank angle increases, more lift is required to maintain altitude because only the vertical component of lift supports the aircraft's weight." },
+    
+    { q: "The best glide speed is the speed that provides:", options: ["Minimum sink rate", "Maximum lift coefficient", "Maximum lift-to-drag ratio", "Minimum drag coefficient"], correct: 2, info: "Best glide speed corresponds to the maximum lift-to-drag (L/D) ratio, producing the greatest horizontal distance travelled." },
+    
+    { q: "Minimum sink speed differs from best glide speed because it is selected to:", options: ["Travel the greatest horizontal distance", "Remain airborne for the longest possible time", "Produce the lowest drag", "Maximise cruise efficiency"], correct: 1, info: "Minimum sink speed provides the lowest rate of descent, maximising endurance rather than range." },
+    
+    { q: "Which statement about the four aerodynamic forces in steady, level flight is correct?", options: ["Lift equals weight and thrust equals drag", "Lift exceeds weight and thrust equals drag", "Lift equals drag and thrust equals weight", "Thrust exceeds lift"], correct: 0, info: "In steady, unaccelerated level flight, all forces are balanced: lift equals weight and thrust equals drag." },
+    
+    { q: "During an unpowered steady glide, the force replacing engine thrust is:", options: ["Lift", "The forward component of the aircraft's weight", "The horizontal component of drag", "The tailplane download"], correct: 1, info: "In a glide, gravity provides the energy to keep the aircraft moving forward. The forward component of weight balances drag." },
+    
+    { q: "Which statement best describes induced downwash?", options: ["It increases the wing's effective angle of attack", "It decreases the wing's effective angle of attack by deflecting the airflow downward", "It only occurs when flaps are extended", "It is produced only at transonic speeds"], correct: 1, info: "Induced downwash changes the local airflow direction, reducing the wing's effective angle of attack and contributing to induced drag." },
+    
+    { q: "As aircraft weight increases while maintaining the same configuration, the speed for minimum total drag (VMD) will generally:", options: ["Decrease", "Remain unchanged", "Increase", "Become equal to stall speed"], correct: 2, info: "A heavier aircraft must fly faster to achieve the angle of attack corresponding to minimum total drag, so VMD increases with weight." },
+
+
+    //Advanced Aerodynamics & Performance
+
+    { q: "A laminar boundary layer produces less skin-friction drag than a turbulent boundary layer because it:", options: ["Contains more kinetic energy", "Has less mixing between adjacent airflow layers", "Produces stronger vortices", "Creates a higher pressure differential"], correct: 1, info: "Laminar flow has minimal mixing between airflow layers, resulting in lower skin-friction drag than turbulent flow." },
+
+    { q: "Although a turbulent boundary layer creates more skin-friction drag, it is often desirable because it:", options: ["Eliminates induced drag", "Delays boundary layer separation", "Reduces aircraft weight", "Reduces the angle of attack"], correct: 1, info: "A turbulent boundary layer has more energy and is better able to resist an adverse pressure gradient before separating." },
+    
+    { q: "On a typical aerofoil, the boundary layer is generally thickest:", options: ["At the leading edge", "At the point of maximum thickness", "Near the trailing edge", "At the wing root only"], correct: 2, info: "The boundary layer grows progressively as airflow moves rearwards, making it thickest near the trailing edge." },
+    
+    { q: "The transition point on a wing is the point where:", options: ["The airflow separates from the wing", "The boundary layer changes from laminar to turbulent", "The airflow becomes supersonic", "The centre of pressure changes direction"], correct: 1, info: "The transition point marks the change from laminar to turbulent boundary-layer flow." },
+    
+    { q: "The primary purpose of countersunk (flush) rivets on high-speed aircraft is to:", options: ["Increase structural strength only", "Reduce skin-friction and interference drag", "Increase wing loading", "Delay the stall"], correct: 1, info: "Flush rivets minimise airflow disturbance, reducing parasite drag compared with protruding-head rivets." },
+    
+    { q: "According to Newton's Third Law, a jet engine produces thrust because:", options: ["Air accelerates naturally through the intake", "The engine pushes exhaust gases rearwards, producing an equal and opposite forward reaction", "Lift is converted directly into thrust", "Atmospheric pressure pushes the aircraft forwards"], correct: 1, info: "Jet propulsion is a direct application of Newton's Third Law of Motion." },
+    
+    { q: "For the same thrust, a propulsive system with a lower exhaust velocity and a larger mass flow generally:", options: ["Is less efficient", "Has the same efficiency", "Is more propulsively efficient", "Produces no useful thrust"], correct: 2, info: "Accelerating a large mass of air by a small amount is generally more efficient than accelerating a small mass by a large amount." },
+    
+    { q: "Compared with a turbojet, a high-bypass turbofan engine is generally:", options: ["Less fuel efficient and noisier", "More fuel efficient and quieter", "Less efficient but quieter", "More efficient only at supersonic speeds"], correct: 1, info: "High-bypass turbofans achieve better propulsive efficiency and significantly lower noise levels than turbojets." },
+    
+    { q: "On a hot, humid day, aircraft take-off performance is reduced primarily because:", options: ["Air density is reduced", "Engine oil temperature decreases", "Wing loading decreases", "Static pressure increases"], correct: 0, info: "High temperature and humidity reduce air density, decreasing both engine performance and lift." },
+    
+    { q: "An increase in humidity, while pressure and temperature remain constant, generally causes air density to:", options: ["Increase", "Remain unchanged", "Decrease", "Double"], correct: 2, info: "Water vapour is less dense than dry air, so humid air is slightly less dense than dry air under the same conditions." },
+
+
+    //Operqtional Aerodynamics
+
+
+    { q: "Ground effect reduces induced drag because:", options: ["The wing generates less lift", "Wingtip vortices are weakened by interference from the ground", "Profile drag is eliminated", "The aircraft weight is effectively reduced"], correct: 1, info: "When operating close to the ground, wingtip vortices are restricted, reducing induced drag and improving lift efficiency." },
+
+    { q: "Compared with flight outside ground effect, an aircraft in ground effect will generally:", options: ["Require a higher angle of attack for the same lift", "Require less power to maintain level flight", "Experience greater induced drag", "Experience a lower lift-to-drag ratio"], correct: 1, info: "Reduced induced drag means less thrust (and therefore less power) is required to maintain level flight." },
+    
+    { q: "The primary reason an aircraft may float during landing is:", options: ["Reduced parasite drag in ground effect", "Reduced induced drag allowing the aircraft to remain airborne longer", "An increase in wing loading", "An increase in profile drag"], correct: 1, info: "Ground effect improves lift efficiency, often causing the aircraft to float if excess speed is carried into the flare." },
+    
+    { q: "If power is suddenly lost in straight and level flight, the aircraft will initially:", options: ["Maintain altitude indefinitely", "Pitch nose down until a glide is established", "Immediately stall", "Pitch nose up"], correct: 1, info: "Loss of thrust removes one of the balancing forces. The aircraft naturally pitches into a glide until a new equilibrium is established." },
+    
+    { q: "The primary purpose of the vertical stabiliser is to:", options: ["Provide pitch stability", "Provide directional stability", "Increase lift", "Reduce induced drag"], correct: 1, info: "The vertical stabiliser (fin) provides stability about the normal (yaw) axis." },
+    
+    { q: "The rudder is primarily used to:", options: ["Maintain longitudinal stability", "Control yaw about the normal axis", "Increase lift during take-off", "Control pitch during landing"], correct: 1, info: "The rudder controls aircraft motion about the normal (vertical) axis." },
+    
+    { q: "Which condition produces the greatest true landing speed?", options: ["Cold, dry air", "Cold, humid air", "Hot, humid air", "Standard ISA conditions"], correct: 2, info: "High temperature and humidity reduce air density, increasing the true airspeed required for the same indicated landing speed." },
+    
+    { q: "A high-wing aircraft generally possesses greater lateral stability because of:", options: ["Higher aspect ratio", "The pendulum effect and keel effect", "Greater wing loading", "Lower induced drag"], correct: 1, info: "The combination of the pendulum effect and fuselage keel effect gives high-wing aircraft improved lateral stability." },
+    
+    { q: "The aerodynamic force acting perpendicular to the relative airflow is:", options: ["Weight", "Lift", "Drag", "Thrust"], correct: 1, info: "Lift is always defined as the component of aerodynamic force perpendicular to the relative airflow." },
+    
+    { q: "The aerodynamic force acting parallel and opposite to the relative airflow is:", options: ["Weight", "Lift", "Thrust", "Drag"], correct: 3, info: "Drag is the aerodynamic force acting parallel and opposite to the direction of the relative airflow." },
+
+
+    //Final Fixed Wing Additions
+
+    { q: "If a stall strip is missing from one wing, the most likely consequence at or near the stall is:", options: ["Reduced induced drag", "Asymmetrical stall characteristics and reduced aileron effectiveness", "Improved roll control", "A lower stall speed"], correct: 1, info: "Stall strips are designed to ensure the wing root stalls first. Missing strips can alter stall progression and lead to asymmetric handling." },
+
+{ q: "The primary purpose of a stall strip is to:", options: ["Increase maximum lift", "Ensure the wing root stalls before the wingtip", "Reduce parasite drag", "Improve cruise performance"], correct: 1, info: "A stall strip locally disturbs the airflow, causing the wing root to stall first and preserving aileron effectiveness." },
+
+{ q: "Many modern transport aircraft use a stick shaker because it:", options: ["Automatically recovers the aircraft from a stall", "Provides a tactile warning of an approaching stall", "Increases elevator effectiveness", "Deploys the speed brakes automatically"], correct: 1, info: "A stick shaker vibrates the control column as the aircraft approaches the critical angle of attack, providing an unmistakable stall warning." },
+
+{ q: "Some aircraft incorporate a stick pusher system to:", options: ["Increase elevator authority during take-off", "Automatically reduce the angle of attack before a deep stall develops", "Improve pitch control during landing", "Assist the autopilot during cruise"], correct: 1, info: "A stick pusher automatically applies a nose-down control input when the aircraft approaches a critical angle of attack." },
+
+{ q: "Compared with a conventional wing, a delta wing generally:", options: ["Has a lower critical angle of attack", "Can sustain a higher angle of attack before stalling", "Produces less induced drag at all speeds", "Requires leading-edge slats for normal operation"], correct: 1, info: "Delta wings generate stable leading-edge vortices, allowing them to operate at significantly higher angles of attack before stall." },
+
+{ q: "The leading-edge vortices formed on a delta wing primarily:", options: ["Increase profile drag only", "Increase lift at high angles of attack", "Reduce wing area", "Reduce the critical Mach number"], correct: 1, info: "Strong leading-edge vortices create additional suction over the upper surface, increasing lift at high angles of attack." },
+
+{ q: "A Fowler flap differs from a plain flap because it:", options: ["Only increases camber", "Increases both wing area and camber", "Reduces wing area", "Produces less lift than a plain flap"], correct: 1, info: "A Fowler flap translates rearwards before deflecting, increasing wing area as well as camber." },
+
+{ q: "The principal aerodynamic advantage of Krueger flaps is that they:", options: ["Reduce induced drag during cruise", "Increase the leading-edge camber for improved low-speed performance", "Reduce wing loading", "Replace the function of trailing-edge flaps"], correct: 1, info: "Krueger flaps deploy from the lower leading edge, increasing camber and delaying stall during take-off and landing." },
+
+{ q: "For a given indicated airspeed, increasing aircraft weight causes the angle of attack required for level flight to:", options: ["Decrease", "Remain unchanged", "Increase", "Become zero"], correct: 2, info: "A heavier aircraft requires a higher lift coefficient at the same IAS, achieved by increasing the angle of attack." },
+
+{ q: "The critical angle of attack at which a wing stalls is primarily determined by the:", options: ["Wing loading", "Aerofoil shape and high-lift device configuration", "Aircraft weight", "Outside air temperature"], correct: 1, info: "The critical angle of attack depends mainly on the aerofoil design and any deployed high-lift devices, not on aircraft weight." },
+
+
+//Master Bank
+
 { q: "According to the International Standard Atmosphere (ISA), the standard atmospheric conditions are referenced to:", options: ["The Equator at sea level", "45° latitude at mean sea level", "The North Pole at sea level", "The Tropopause"], correct: 1, info: "The ISA is based on standard atmospheric conditions referenced to mean sea level at 45° latitude." },
 
 { q: "As altitude increases, atmospheric pressure:", options: ["Decreases exponentially", "Decreases at a constant rate", "Remains constant", "Increases exponentially"], correct: 0, info: "Atmospheric pressure decreases exponentially with altitude because both air density and the mass of air above decrease." },
@@ -658,6 +820,9 @@
 
 { q: "The primary benefit of a turbulent boundary layer compared with a laminar boundary layer is that it:", options: ["Produces less drag at all speeds", "Delays airflow separation by containing more energy", "Reduces aircraft weight", "Eliminates induced drag"], correct: 1, info: "Although it has higher skin-friction drag, a turbulent boundary layer resists adverse pressure gradients more effectively and delays separation." }
 
+
+
+            
 ];
 
 
